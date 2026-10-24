@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -16,6 +16,26 @@ export default function HomePage() {
 
   const openInterestModal = () => setInterestModalOpen(true);
   const closeInterestModal = () => setInterestModalOpen(false);
+
+  useEffect(() => {
+    const revealElements = document.querySelectorAll(".reveal-blur, .reveal-scale-blur");
+    if (typeof window !== "undefined" && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -40px 0px", threshold: 0.1 }
+      );
+      revealElements.forEach((el) => observer.observe(el));
+    } else {
+      revealElements.forEach((el) => el.classList.add("is-visible"));
+    }
+  }, []);
 
   return (
     <main className="min-h-screen flex flex-col bg-white">

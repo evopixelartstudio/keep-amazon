@@ -12,7 +12,7 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Coluna 1: Fotografia Monocromática da Muda em Mãos com elemento decorativo */}
-          <div className="lg:col-span-4 order-2 lg:order-1 flex justify-center">
+          <div className="lg:col-span-4 order-2 lg:order-1 flex justify-center reveal-scale-blur">
             <div className="relative w-full max-w-[360px] lg:max-w-none h-[320px] sm:h-[380px] lg:h-[400px]">
               {/* Elemento geométrico decorativo lime no canto superior esquerdo */}
               <div
@@ -33,7 +33,7 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
           </div>
 
           {/* Coluna 2: Conteúdo Central do Projeto Tá na Mão */}
-          <div className="lg:col-span-4 order-1 lg:order-2 space-y-6 text-center lg:text-left px-2 sm:px-4">
+          <div className="lg:col-span-4 order-1 lg:order-2 space-y-6 text-center lg:text-left px-2 sm:px-4 reveal-blur delay-100">
             <SectionHeading
               label="PROJETO EM DESTAQUE"
               title={
@@ -67,7 +67,7 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
           </div>
 
           {/* Coluna 3: Fotografia da Estante com Card Escuro Sobreposto */}
-          <div className="lg:col-span-4 order-3 flex justify-center">
+          <div className="lg:col-span-4 order-3 flex justify-center reveal-scale-blur delay-200">
             <div className="relative w-full max-w-[360px] lg:max-w-none h-[320px] sm:h-[380px] lg:h-[400px]">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-sm group">
                 <Image
@@ -98,4 +98,3 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
     </section>
   );
 }
-

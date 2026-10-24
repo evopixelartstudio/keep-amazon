@@ -78,7 +78,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
     <footer id="contato" className="w-full bg-[#10171D] text-white pt-16 pb-12 border-t border-white/10">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 space-y-12">
         {/* Linha Superior: Marca, Navegação, Redes e Frase */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10 text-center lg:text-left reveal-blur">
           {/* Logotipo Keep Amazon */}
           <div>
             <BrandLogo theme="light" />
@@ -134,7 +134,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
         </div>
 
         {/* Linha Inferior: Direitos Autorais */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 reveal-blur delay-100">
           <p>{SITE_CONFIG.copyright}</p>
           <p className="text-slate-500">
             Bioeconomia · Desenvolvimento Regional · Inovação

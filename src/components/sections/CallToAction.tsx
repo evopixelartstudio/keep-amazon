@@ -15,7 +15,7 @@ export function CallToAction({ onJoinClick }: CallToActionProps) {
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Coluna Esquerda: Título com highlight lime */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 reveal-blur">
             <SectionHeading
               theme="dark"
               label="FAÇA PARTE"
@@ -33,7 +33,7 @@ export function CallToAction({ onJoinClick }: CallToActionProps) {
           </div>
 
           {/* Coluna Central: Texto de apoio e CTA Lime */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-6 reveal-blur delay-100">
             <p className="text-base sm:text-[16px] text-slate-300 leading-relaxed font-normal">
               Seja um parceiro, um produtor, um apoiador ou um consumidor
               consciente. A Keep Amazon é para todos que acreditam em um futuro
@@ -53,7 +53,7 @@ export function CallToAction({ onJoinClick }: CallToActionProps) {
           </div>
 
           {/* Coluna Direita: Fotografia Monocromática Mãos com Frutos Regionais */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+          <div className="lg:col-span-4 flex justify-center lg:justify-end reveal-scale-blur delay-200">
             <div className="relative w-full max-w-[340px] h-[240px] sm:h-[280px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
               <Image
                 src="/images/02_maos_frutos.png"
@@ -72,4 +72,3 @@ export function CallToAction({ onJoinClick }: CallToActionProps) {
     </section>
   );
 }
-

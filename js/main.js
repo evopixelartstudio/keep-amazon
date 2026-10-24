@@ -214,5 +214,39 @@ document.addEventListener('DOMContentLoaded', () => {
     formFeedback.innerHTML = htmlMessage;
     formFeedback.style.display = 'block';
   };
+
+  // 5. Scroll Blur & Reveal Observer (Efeito de Desfoque Revelado no Scroll)
+  const revealElements = document.querySelectorAll('.reveal-blur, .reveal-scale-blur');
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -20px 0px',
+        threshold: 0.05,
+      }
+    );
+
+    revealElements.forEach((el) => {
+      // Se o elemento já estiver na viewport visível, anima suavemente na entrada inicial
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 30 && rect.bottom > 0) {
+        // Pequeno atraso para visualização da animação inicial
+        setTimeout(() => el.classList.add('is-visible'), 50);
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+  } else {
+    revealElements.forEach((el) => el.classList.add('is-visible'));
+  }
 });
 

@@ -1231,3 +1231,93 @@ a {
   }
 }
 
+
+
+/* ==========================================================================
+   SCROLL BLUR & ENTRANCE ANIMATIONS
+   ========================================================================== */
+
+.reveal-blur {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
+}
+
+.reveal-blur.is-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+.reveal-scale-blur {
+  opacity: 0;
+  filter: blur(16px);
+  transform: scale(0.94) translateY(24px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
+}
+
+.reveal-scale-blur.is-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1) translateY(0);
+}
+
+/* Delays escalonados para efeito cascata */
+.delay-100 { transition-delay: 0.12s; }
+.delay-200 { transition-delay: 0.22s; }
+.delay-300 { transition-delay: 0.32s; }
+.delay-400 { transition-delay: 0.42s; }
+.delay-500 { transition-delay: 0.52s; }
+.delay-600 { transition-delay: 0.62s; }
+
+/* Entrada com desfoque refinado no Hero ao abrir a página */
+.hero-anim-eyebrow {
+  animation: heroBlurIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards;
+}
+
+.hero-anim-title {
+  animation: heroBlurIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards;
+}
+
+.hero-anim-desc {
+  animation: heroBlurIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+}
+
+.hero-anim-cta {
+  animation: heroBlurIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s backwards;
+}
+
+@keyframes heroBlurIn {
+  from {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-blur,
+  .reveal-scale-blur,
+  .hero-anim-eyebrow,
+  .hero-anim-title,
+  .hero-anim-desc,
+  .hero-anim-cta {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
