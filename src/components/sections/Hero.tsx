@@ -23,19 +23,19 @@ export function Hero({ onExploreClick }: HeroProps) {
       id="inicio"
       className="relative min-h-[760px] lg:min-h-[820px] w-full flex items-center justify-start overflow-hidden bg-[#10171D] pt-28 pb-16 lg:pt-36 lg:pb-24"
     >
-      {/* Imagem de Fundo Cinematográfica Monocromática */}
+      {/* Imagem de Fundo Luminous Bio-Map Conectando Rios e Cidade */}
       <div className="absolute inset-0 z-0 select-none">
         <Image
-          src="/images/01_hero_floresta_rio.png"
-          alt="Floresta amazônica com rio e pessoa indígena contemplando a paisagem"
+          src="/images/hero_manaus_map.jpg"
+          alt="Mapa luminoso e rios da Amazônia conectando a floresta e a cidade"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[78%_center] lg:object-[82%_center] grayscale brightness-[0.88] contrast-[1.08]"
+          className="object-cover object-right lg:object-[85%_center] brightness-[0.95] contrast-[1.08]"
         />
 
         {/* Gradiente escuro à esquerda para legibilidade impecável dos textos */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#10171D] via-[#10171D]/80 md:via-[#10171D]/65 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#10171D] via-[#10171D]/75 md:via-[#10171D]/55 to-transparent" />
 
         {/* Vinheta inferior sutil */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#10171D]/50 to-transparent" />

@@ -1,20 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://keepamazon.org"),
@@ -41,10 +26,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/01_hero_floresta_rio.png",
+        url: "/images/hero_manaus_map.jpg",
         width: 1200,
         height: 630,
-        alt: "Keep Amazon - Bioeconomia e inovação na floresta",
+        alt: "Keep Amazon - Bioeconomia, rios e inovação conectando a Amazônia",
       },
     ],
   },
@@ -68,9 +53,12 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${plusJakartaSans.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className="bg-white text-[#10171D] min-h-screen antialiased selection:bg-[#C8F31D] selection:text-[#10171D]"
         suppressHydrationWarning
