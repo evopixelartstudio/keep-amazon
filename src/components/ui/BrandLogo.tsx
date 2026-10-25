@@ -26,7 +26,7 @@ export function BrandLogo({ className = "", theme = "light" }: BrandLogoProps) {
           {/* Contorno orgânico da folha */}
           <path
             d="M7 26.5C6.5 19.5 10 10.5 29 7C29 7 28.5 21 21.5 26.5C15.5 31.5 8 28.5 7 26.5Z"
-            stroke="#C8F31D"
+            stroke={isDark ? "#10171D" : "#C8F31D"}
             strokeWidth="2.4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -34,20 +34,20 @@ export function BrandLogo({ className = "", theme = "light" }: BrandLogoProps) {
           {/* Nervura central */}
           <path
             d="M10 24C15 21 21 16 26.5 9.5"
-            stroke="#C8F31D"
+            stroke={isDark ? "#10171D" : "#C8F31D"}
             strokeWidth="2"
             strokeLinecap="round"
           />
           {/* Nervuras secundárias sutis */}
           <path
             d="M16 20C17.5 17.5 20 16.5 22 16"
-            stroke="#C8F31D"
+            stroke={isDark ? "#10171D" : "#C8F31D"}
             strokeWidth="1.6"
             strokeLinecap="round"
           />
           <path
             d="M12.5 22.5C14 21 16 20.5 17.5 20.5"
-            stroke="#C8F31D"
+            stroke={isDark ? "#10171D" : "#C8F31D"}
             strokeWidth="1.5"
             strokeLinecap="round"
           />
