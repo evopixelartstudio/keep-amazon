@@ -66,24 +66,17 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
             </div>
           </div>
 
-          {/* Coluna 3: Fotografia da Estante com Card Escuro Sobreposto */}
+          {/* Coluna 3: Fotografia da Estante com elemento decorativo lime inferior */}
           <div className="lg:col-span-4 order-3 flex justify-center reveal-scale-blur delay-200">
             <div className="relative w-full max-w-[360px] lg:max-w-none h-[320px] sm:h-[380px] lg:h-[400px]">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-sm group">
                 <Image
-                  src="/images/04_estante_hortalicas.png"
+                  src="/images/04_estante_hortalicas.jpg"
                   alt="Estante viva com hortaliças e produtos regionais amazônicos"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   className="object-cover grayscale contrast-110 brightness-95 group-hover:scale-102 transition-transform duration-500 rounded-2xl"
                 />
-
-                {/* Card Escuro Sobreposto com Frase de Impacto */}
-                <div className="absolute top-6 bottom-6 left-5 w-[140px] sm:w-[160px] bg-[#10171D]/90 backdrop-blur-md rounded-xl p-4 sm:p-5 flex flex-col justify-center border border-white/10 z-10 shadow-lg">
-                  <p className="text-white text-sm sm:text-[15px] font-medium leading-snug">
-                    “Do solo amazônico para a sua mesa.”
-                  </p>
-                </div>
               </div>
 
               {/* Elemento geométrico decorativo lime no canto inferior esquerdo */}
