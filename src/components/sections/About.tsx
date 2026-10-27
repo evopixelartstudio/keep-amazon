@@ -27,19 +27,20 @@ export function About({ onLearnMoreClick }: AboutProps) {
                     </span>
                   </>
                 }
+                description="Bioeconomia e desenvolvimento sustentável na Amazônia com conexão real entre a floresta e o mercado."
               />
             </div>
 
             <div className="space-y-4 text-base sm:text-[16px] text-[#666B70] leading-relaxed reveal-blur delay-200">
               <p>
                 Somos uma ponte entre a riqueza da Amazônia e o futuro sustentável.
-                Atuamos para que produtos da floresta ganhem espaço, valor e novas
-                possibilidades.
+                Atuamos para que produtos da Amazônia com origem e valorização regional
+                ganhem espaço, padrão de excelência e novas possibilidades.
               </p>
               <p>
                 Conectamos produtores, comunidades, empresas e consumidores,
-                promovendo a bioeconomia como motor de desenvolvimento, inclusão
-                e preservação.
+                promovendo a bioeconomia amazônica como motor de desenvolvimento econômico,
+                inclusão social e conservação da biodiversidade.
               </p>
             </div>
 
@@ -48,10 +49,9 @@ export function About({ onLearnMoreClick }: AboutProps) {
                 variant="dark"
                 size="md"
                 withArrow
-                href="#adesao"
-                onClick={onLearnMoreClick}
+                href="/bioeconomia-amazonica"
               >
-                Saiba mais
+                Conheça a bioeconomia
               </Button>
             </div>
           </div>

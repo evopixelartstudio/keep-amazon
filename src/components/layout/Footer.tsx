@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { BrandLogo } from "@/components/ui/BrandLogo";
-import { NAV_ITEMS, SITE_CONFIG } from "@/data/site-content";
+import { SITE_CONFIG } from "@/data/site-content";
 
 interface FooterProps {
   onOpenInterestModal?: () => void;
@@ -135,6 +137,16 @@ function SouthAmericaIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 export function Footer({ onOpenInterestModal }: FooterProps) {
+  const footerLinks = [
+    { label: "Início", href: "/" },
+    { label: "Bioeconomia Amazônica", href: "/bioeconomia-amazonica" },
+    { label: "Produtos da Amazônia", href: "/produtos-amazonicos" },
+    { label: "Projetos Sustentáveis", href: "/projetos-sustentaveis" },
+    { label: "Educação Ambiental", href: "/educacao-ambiental" },
+    { label: "Projeto Tá na Mão", href: "/ta-na-mao" },
+    { label: "Contato & Parcerias", href: "/contato" },
+  ];
+
   return (
     <footer id="contato" className="w-full bg-[#F1F5DC] text-[#10171D] pt-16 sm:pt-20 pb-12 border-t border-[#E0E5D0]">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 space-y-12">
@@ -149,7 +161,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
               compromisso, transparência e sustentabilidade.
             </p>
 
-            {/* Ícones em caixas escuras arredondadas (como na referência) */}
+            {/* Ícones em caixas escuras arredondadas */}
             <div className="flex items-center gap-2.5 pt-1">
               <a
                 href="tel:+5592999999810"
@@ -190,35 +202,24 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
               Navegue:
             </h4>
             <nav aria-label="Links rápidos do rodapé" className="flex flex-col space-y-2.5">
-              {NAV_ITEMS.map((item) => (
+              {footerLinks.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  onClick={
-                    item.href === "#adesao" && onOpenInterestModal
-                      ? (e) => {
-                          e.preventDefault();
-                          onOpenInterestModal();
-                        }
-                      : undefined
-                  }
                   className="text-[14.5px] text-[#4B5563] hover:text-[#10171D] hover:translate-x-1 font-normal transition-all inline-block w-fit"
                 >
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href="#tanamo"
-                className="text-[14.5px] text-[#4B5563] hover:text-[#10171D] hover:translate-x-1 font-normal transition-all inline-block w-fit"
-              >
-                Tá na Mão
-              </Link>
-              <Link
-                href="#contato"
-                className="text-[14.5px] text-[#4B5563] hover:text-[#10171D] hover:translate-x-1 font-normal transition-all inline-block w-fit"
-              >
-                Contatos
-              </Link>
+              {onOpenInterestModal && (
+                <button
+                  type="button"
+                  onClick={onOpenInterestModal}
+                  className="text-[14.5px] text-[#4B5563] hover:text-[#10171D] hover:translate-x-1 font-normal transition-all inline-block w-fit text-left cursor-pointer"
+                >
+                  Adesão e Parcerias
+                </button>
+              )}
             </nav>
           </div>
 
@@ -285,7 +286,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
         </div>
 
         {/* Linha Inferior: Direitos Autorais */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B] reveal-blur delay-100">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B]">
           <p>{SITE_CONFIG.copyright}</p>
           <p className="text-[#64748B]">
             Bioeconomia · Desenvolvimento Regional · Inovação

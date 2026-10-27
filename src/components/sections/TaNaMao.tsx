@@ -38,8 +38,8 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
               label="PROJETO EM DESTAQUE"
               title={
                 <>
-                  Tá na{" "}
-                  <span className="text-[#84b306] font-semibold">Mão</span>
+                  Conheça o projeto{" "}
+                  <span className="text-[#84b306] font-semibold">Tá na Mão</span>
                 </>
               }
               align="left"
@@ -53,15 +53,14 @@ export function TaNaMao({ onLearnMoreClick }: TaNaMaoProps) {
               uso e benefícios para o dia a dia.
             </p>
 
-            <div className="pt-2 flex justify-center lg:justify-start">
+            <div className="pt-2 flex justify-center lg:justify-start gap-4">
               <Button
                 variant="dark"
                 size="md"
                 withArrow
-                href="#adesao"
-                onClick={onLearnMoreClick}
+                href="/ta-na-mao"
               >
-                Saiba mais
+                Ver detalhes do projeto
               </Button>
             </div>
           </div>

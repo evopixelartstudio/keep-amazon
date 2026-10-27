@@ -18,11 +18,11 @@ export function Solutions({ onExploreOptionsClick }: SolutionsProps) {
               label="NOSSAS INICIATIVAS"
               title={
                 <>
-                  Soluções para um
+                  Educação ambiental e
                   <br />
-                  futuro mais{" "}
+                  sustentabilidade para{" "}
                   <span className="text-[#84b306] font-semibold">
-                    sustentável.
+                    empresas.
                   </span>
                 </>
               }
@@ -31,19 +31,27 @@ export function Solutions({ onExploreOptionsClick }: SolutionsProps) {
 
           <div className="max-w-md space-y-5 reveal-blur delay-100">
             <p className="text-sm sm:text-[15px] text-[#666B70] leading-relaxed">
-              A Keep Amazon oferece diferentes formas de participação e acesso aos
-              nossos produtos e projetos. Escolha a que mais faz sentido para
-              você e faça parte dessa transformação.
+              A Keep Amazon oferece diferentes formatos de participação e acesso aos
+              nossos produtos e projetos. Conectamos sua instituição ou empresa à bioeconomia
+              prática por meio de palestras, estantes vivas e experiências integradas.
             </p>
-            <Button
-              variant="dark"
-              size="md"
-              withArrow
-              href="#adesao"
-              onClick={onExploreOptionsClick}
-            >
-              Ver todas as opções
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                variant="dark"
+                size="md"
+                withArrow
+                href="/projetos-sustentaveis"
+              >
+                Ver projetos sustentáveis
+              </Button>
+              <Button
+                variant="outline"
+                size="md"
+                href="/educacao-ambiental"
+              >
+                Educação ambiental
+              </Button>
+            </div>
           </div>
         </div>
 
