@@ -144,6 +144,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
     { label: "Projetos Sustentáveis", href: "/projetos-sustentaveis" },
     { label: "Educação Ambiental", href: "/educacao-ambiental" },
     { label: "Projeto Tá na Mão", href: "/ta-na-mao" },
+    { label: "Word Amazon Gamer", href: "/#game" },
     { label: "Contato & Parcerias", href: "/contato" },
   ];
 
@@ -151,7 +152,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
     <footer id="contato" className="w-full bg-[#F1F5DC] text-[#10171D] pt-16 sm:pt-20 pb-12 border-t border-[#E0E5D0]">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 space-y-12">
         {/* Grid de 3 Colunas: Marca, Navegue e Contatos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-14 pb-12 border-b border-[#10171D]/12 reveal-blur">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-14 pb-12 border-b border-[#10171D]/12">
           {/* Coluna 1: Marca, Slogan e Redes Sociais */}
           <div className="lg:col-span-5 flex flex-col items-start space-y-5">
             <BrandLogo theme="dark" />

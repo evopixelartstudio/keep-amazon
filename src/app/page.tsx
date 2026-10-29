@@ -8,6 +8,7 @@ import { Marquee } from "@/components/sections/Marquee";
 import { About } from "@/components/sections/About";
 import { TaNaMao } from "@/components/sections/TaNaMao";
 import { Solutions } from "@/components/sections/Solutions";
+import { GameSection } from "@/components/sections/GameSection";
 import { CallToAction } from "@/components/sections/CallToAction";
 import { InterestModal } from "@/components/sections/InterestModal";
 
@@ -61,6 +62,9 @@ export default function HomePage() {
 
       {/* 06. Nossas Iniciativas (6 Cards de Soluções) */}
       <Solutions onExploreOptionsClick={openInterestModal} />
+
+      {/* 06.5. Word Amazon Gamer (Jogo Educativo e Download) */}
+      <GameSection />
 
       {/* 07. Chamada para Adesão (Faça Parte) */}
       <CallToAction onJoinClick={openInterestModal} />
