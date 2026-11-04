@@ -44,7 +44,7 @@ export function SectionHeading({
         </span>
       </div>
 
-      {/* Título com tipografia Plus Jakarta Sans */}
+      {/* Título com tipografia Montserrat */}
       <h2
         className={`text-3xl sm:text-4xl lg:text-[46px] font-semibold leading-[1.14] tracking-[-0.02em] ${
           isDark ? "text-white" : "text-[#10171D]"

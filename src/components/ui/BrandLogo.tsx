@@ -30,14 +30,14 @@ export function BrandLogo({ className = "", theme = "light" }: BrandLogoProps) {
       {/* Tipografia da Marca */}
       <div className="flex flex-col leading-none">
         <span
-          className={`text-[16px] sm:text-[17px] font-bold tracking-tight ${
+          className={`text-[16px] sm:text-[17px] font-black italic tracking-wide uppercase font-heading ${
             isDark ? "text-[#10171D]" : "text-white"
           }`}
         >
           Keep
         </span>
         <span
-          className={`text-[16px] sm:text-[17px] font-bold tracking-tight ${
+          className={`text-[16px] sm:text-[17px] font-black italic tracking-wide uppercase font-heading ${
             isDark ? "text-[#10171D]" : "text-white"
           }`}
         >

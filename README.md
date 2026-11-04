@@ -50,7 +50,7 @@ Keep Amazon/
 - **Border**: `#E8EBDD` (Bordas de cards de 16px)
 
 ### Tipografia
-- **Títulos**: Plus Jakarta Sans
+- **Títulos**: Montserrat
 - **Textos e Interface**: Inter
 
 ---
