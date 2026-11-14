@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { getSiteUrl } from "@/lib/site-url";
 
 const siteUrl = getSiteUrl();
+const GTM_ID = "GTM-WT3738HT";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -97,17 +99,38 @@ export default function RootLayout({
     description:
       "Iniciativa dedicada à bioeconomia amazônica, valorização de produtos regionais e soluções sustentáveis para empresas e sociedade.",
     url: siteUrl,
-    logo: `${siteUrl}/images/hero_manaus_map.jpg`,
+    logo: `${siteUrl}/images/logo.png`,
+    image: `${siteUrl}/images/hero_manaus_map.jpg`,
+    email: "contato@keepamazon.com.br",
+    telephone: "+55-92-99999-9810",
     sameAs: [
       "https://instagram.com/keepamazon",
       "https://youtube.com/@keepamazon",
     ],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Av. Djalma Batista, 1661",
       addressLocality: "Manaus",
       addressRegion: "AM",
+      postalCode: "69050-010",
       addressCountry: "BR",
     },
+    areaServed: { "@type": "Country", name: "Brasil" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: "+55-92-99999-9810",
+      email: "contato@keepamazon.com.br",
+      availableLanguage: ["Portuguese"],
+    },
+    knowsAbout: [
+      "Bioeconomia amazônica",
+      "Produtos regionais da Amazônia",
+      "Educação ambiental",
+      "Horta vertical e agricultura urbana",
+      "Projetos sustentáveis para empresas (ESG)",
+      "Objetivos de Desenvolvimento Sustentável (ODS)",
+    ],
   };
 
   const jsonLdWebsite = {
@@ -115,6 +138,8 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "Keep Amazon",
     url: siteUrl,
+    inLanguage: "pt-BR",
+    publisher: { "@type": "Organization", name: "Keep Amazon" },
   };
 
   return (
@@ -143,7 +168,30 @@ export default function RootLayout({
         className="bg-white text-[#10171D] min-h-screen antialiased selection:bg-[#C8F31D] selection:text-[#10171D]"
         suppressHydrationWarning
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
         {children}
+
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-loader"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtm-datalayer" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}
+        </Script>
       </body>
     </html>
   );

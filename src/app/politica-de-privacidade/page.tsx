@@ -180,8 +180,9 @@ const SECTIONS: PolicySection[] = [
         <p>
           Seus dados podem ser compartilhados apenas com prestadores de
           serviço que nos apoiam na operação do site e no atendimento, como
-          provedores de hospedagem, ferramentas de e-mail e sistemas de gestão
-          de contatos (CRM). Esses parceiros tratam os dados somente conforme
+          provedores de hospedagem, ferramentas de e-mail, ferramentas de
+          medição de audiência (Google) e sistemas de gestão de contatos
+          (CRM). Esses parceiros tratam os dados somente conforme
           nossas instruções e sob obrigações de confidencialidade e segurança.
         </p>
         <p>
@@ -199,15 +200,31 @@ const SECTIONS: PolicySection[] = [
     content: (
       <>
         <p>
-          Este site utiliza apenas cookies e armazenamento local estritamente
-          necessários ao seu funcionamento. Atualmente não utilizamos cookies
-          de publicidade ou rastreamento de terceiros.
+          Utilizamos cookies e tecnologias semelhantes para o funcionamento do
+          site e para entender como ele é utilizado. Para isso, empregamos o{" "}
+          <strong>Google Tag Manager</strong>, ferramenta do Google que gerencia
+          scripts de medição de audiência (como o Google Analytics). Esses
+          serviços podem coletar dados de navegação, como páginas visitadas,
+          tempo de permanência, tipo de dispositivo, localização aproximada e
+          identificadores de cookies.
         </p>
         <p>
-          Caso passemos a utilizar ferramentas de análise ou marketing, esta
-          Política será atualizada e, quando exigido, solicitaremos o seu
-          consentimento. Você pode, a qualquer momento, gerenciar ou bloquear
-          cookies nas configurações do seu navegador.
+          Essas informações são usadas de forma agregada para melhorar o
+          conteúdo e a experiência do site, com base no legítimo interesse ou,
+          quando exigido, no seu consentimento. O tratamento feito pelo Google
+          segue a sua própria{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Política de Privacidade
+          </a>
+          .
+        </p>
+        <p>
+          Você pode, a qualquer momento, gerenciar ou bloquear cookies nas
+          configurações do seu navegador.
         </p>
       </>
     ),
