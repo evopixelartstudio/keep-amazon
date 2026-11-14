@@ -5,6 +5,7 @@ import { getSiteUrl } from "@/lib/site-url";
 
 const siteUrl = getSiteUrl();
 const GTM_ID = "GTM-WT3738HT";
+const GA_MEASUREMENT_ID = "G-9EBGZ876D9";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -181,17 +182,29 @@ export default function RootLayout({
 
         {children}
 
+        {/* dataLayer + Google Analytics 4 (gtag) + evento inicial do GTM */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
+
+        {/* Google Analytics 4 */}
+        <Script
+          id="ga4-loader"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+
         {/* Google Tag Manager */}
         <Script
           id="gtm-loader"
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
           strategy="afterInteractive"
         />
-        <Script id="gtm-datalayer" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());`}
-        </Script>
       </body>
     </html>
   );
