@@ -69,6 +69,9 @@ export const metadata: Metadata = {
       "Conheça a Keep Amazon: produtos amazônicos, educação ambiental e soluções sustentáveis que conectam a floresta a novas oportunidades.",
     images: ["/images/hero_manaus_map.jpg"],
   },
+  verification: {
+    google: "oLUprP4hg57nitK-biaped5I9csiG57b_nCarLjR3Qg",
+  },
   robots: {
     index: true,
     follow: true,
