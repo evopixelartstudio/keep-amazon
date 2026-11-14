@@ -842,6 +842,183 @@ a {
 }
 
 /* ==========================================================================
+   SEÇÃO 06.2 — OS 17 ODS (AGENDA 2030 ONU)
+   ========================================================================== */
+
+.ods-section {
+  padding: 80px 0 100px;
+  background-color: var(--white);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ods-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .ods-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.ods-intro-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--gray-text);
+  max-width: 680px;
+  margin-top: 12px;
+}
+
+.ods-wheel-badge {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .ods-wheel-badge {
+    display: flex;
+  }
+}
+
+.ods-wheel-badge img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.ods-wheel-badge span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.ods-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 768px) {
+  .ods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .ods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ods-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px;
+  background-color: #F9FAF6;
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  transition: all var(--transition-normal);
+}
+
+.ods-card:hover {
+  background-color: var(--white);
+  border-color: #d8dec3;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(16, 23, 29, 0.12);
+}
+
+.ods-img-wrap {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-normal);
+}
+
+@media (min-width: 600px) {
+  .ods-img-wrap {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+.ods-card:hover .ods-img-wrap {
+  transform: scale(1.05);
+}
+
+.ods-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ods-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ods-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-text);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ods-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ods-card-title {
+  font-family: var(--font-heading);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--dark-ink);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.ods-card-desc {
+  font-size: 13.5px;
+  color: var(--gray-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ods-source-note {
+  margin-top: 36px;
+  font-size: 12px;
+  color: #8A9096;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
    SEÇÃO 06.5 — WORD AMAZON GAMER
    ========================================================================== */
 
