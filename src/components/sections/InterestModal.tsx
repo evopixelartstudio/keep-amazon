@@ -283,7 +283,16 @@ export function InterestModal({ isOpen, onClose }: InterestModalProps) {
                     className="mt-1 w-4 h-4 rounded text-[#10171D] border-gray-300 focus:ring-[#C8F31D]"
                   />
                   <span className="text-xs text-[#666B70] leading-snug">
-                    Concordo em compartilhar meus dados para contato sobre as iniciativas da Keep Amazon, em conformidade com as boas práticas de privacidade.
+                    Concordo em compartilhar meus dados para contato sobre as iniciativas da Keep Amazon, conforme a{" "}
+                    <a
+                      href="/politica-de-privacidade"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 text-[#10171D] hover:text-[#5f8a00]"
+                    >
+                      Política de Privacidade
+                    </a>
+                    .
                   </span>
                 </label>
                 {errors.privacyConsent && (

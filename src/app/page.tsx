@@ -9,6 +9,7 @@ import { About } from "@/components/sections/About";
 import { TaNaMao } from "@/components/sections/TaNaMao";
 import { Solutions } from "@/components/sections/Solutions";
 import { GameSection } from "@/components/sections/GameSection";
+import { OdsSection } from "@/components/sections/OdsSection";
 import { CallToAction } from "@/components/sections/CallToAction";
 import { InterestModal } from "@/components/sections/InterestModal";
 
@@ -62,6 +63,9 @@ export default function HomePage() {
 
       {/* 06. Nossas Iniciativas (6 Cards de Soluções) */}
       <Solutions onExploreOptionsClick={openInterestModal} />
+
+      {/* 06.2. Os 17 Objetivos de Desenvolvimento Sustentável (ODS) */}
+      <OdsSection />
 
       {/* 06.5. Word Amazon Gamer (Jogo Educativo e Download) */}
       <GameSection />

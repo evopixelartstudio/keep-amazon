@@ -144,6 +144,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
     { label: "Projetos Sustentáveis", href: "/projetos-sustentaveis" },
     { label: "Educação Ambiental", href: "/educacao-ambiental" },
     { label: "Projeto Tá na Mão", href: "/ta-na-mao" },
+    { label: "Objetivos (ODS)", href: "/#ods" },
     { label: "Word Amazon Gamer", href: "/#game" },
     { label: "Contato & Parcerias", href: "/contato" },
   ];
@@ -289,9 +290,17 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
         {/* Linha Inferior: Direitos Autorais */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#64748B]">
           <p>{SITE_CONFIG.copyright}</p>
-          <p className="text-[#64748B]">
-            Bioeconomia · Desenvolvimento Regional · Inovação
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+            <Link
+              href="/politica-de-privacidade"
+              className="text-[#4B5563] hover:text-[#10171D] underline-offset-4 hover:underline transition-colors"
+            >
+              Política de Privacidade
+            </Link>
+            <p className="text-[#64748B]">
+              Bioeconomia · Desenvolvimento Regional · Inovação
+            </p>
+          </div>
         </div>
       </div>
     </footer>
