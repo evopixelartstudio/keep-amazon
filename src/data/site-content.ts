@@ -22,7 +22,7 @@ export const SITE_CONFIG = {
   title: 'Keep Amazon | Conectando a floresta a novas possibilidades',
   description:
     'Conheça a Keep Amazon, iniciativa dedicada à valorização regional, à bioeconomia e à conexão entre a floresta, as pessoas e novas oportunidades.',
-  url: 'https://keepamazon.org',
+  url: 'https://keepamazon.com.br',
   tagline: 'Floresta · Pessoas · Futuro',
   copyright: '© 2026 Keep Amazon. Todos os direitos reservados.',
 };
