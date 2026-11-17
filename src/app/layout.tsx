@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { getSiteUrl } from "@/lib/site-url";
+import { CookieBanner } from "@/components/ui/CookieBanner";
 
 const siteUrl = getSiteUrl();
 const GTM_ID = "GTM-WT3738HT";
@@ -185,11 +186,22 @@ export default function RootLayout({
 
         {children}
 
-        {/* dataLayer + Google Analytics 4 (gtag) + evento inicial do GTM */}
+        <CookieBanner />
+
+        {/* dataLayer + Consent Mode v2 (LGPD) + Google Analytics 4 (gtag) + evento inicial do GTM */}
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 window.gtag = gtag;
+var kaConsent = 'denied';
+try { if (localStorage.getItem('ka_cookie_consent') === 'granted') kaConsent = 'granted'; } catch (e) {}
+gtag('consent', 'default', {
+  analytics_storage: kaConsent,
+  ad_storage: kaConsent,
+  ad_user_data: kaConsent,
+  ad_personalization: kaConsent,
+  wait_for_update: 500
+});
 dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`}

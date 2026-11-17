@@ -223,8 +223,11 @@ const SECTIONS: PolicySection[] = [
           .
         </p>
         <p>
-          Você pode, a qualquer momento, gerenciar ou bloquear cookies nas
-          configurações do seu navegador.
+          Os cookies de medição só são ativados depois que você os aceita no
+          aviso de cookies exibido no site. Você pode mudar sua escolha a
+          qualquer momento pelo link &quot;Preferências de cookies&quot; no
+          rodapé, ou gerenciar e bloquear cookies nas configurações do seu
+          navegador.
         </p>
       </>
     ),

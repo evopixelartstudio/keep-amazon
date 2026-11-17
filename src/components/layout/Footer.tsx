@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { SITE_CONFIG } from "@/data/site-content";
+import { CookiePreferencesButton } from "@/components/ui/CookieBanner";
 
 interface FooterProps {
   onOpenInterestModal?: () => void;
@@ -297,6 +298,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
             >
               Política de Privacidade
             </Link>
+            <CookiePreferencesButton className="text-[#4B5563] hover:text-[#10171D] underline-offset-4 hover:underline transition-colors" />
             <p className="text-[#64748B]">
               Bioeconomia · Desenvolvimento Regional · Inovação
             </p>
