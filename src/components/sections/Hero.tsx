@@ -23,19 +23,22 @@ export function Hero({ onExploreClick }: HeroProps) {
       id="inicio"
       className="relative w-full overflow-hidden bg-[#10171D] pt-24 sm:pt-28 pb-16 lg:min-h-[820px] lg:pt-36 lg:pb-24 lg:flex lg:items-center"
     >
-      {/* Desktop: Imagem de Fundo Luminous Bio-Map Conectando Rios e Cidade */}
-      <div className="hidden lg:block absolute inset-0 z-0 select-none">
+      {/* Imagem de Fundo Luminous Bio-Map Conectando Rios e Cidade (mobile e desktop) */}
+      <div className="absolute inset-0 z-0 select-none">
         <Image
           src="/images/hero_manaus_map.jpg"
           alt="Mapa luminoso e rios da Amazônia conectando a floresta e a cidade"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[85%_center] brightness-[0.95] contrast-[1.08]"
+          className="object-cover object-[70%_center] lg:object-[85%_center] brightness-[0.95] contrast-[1.08]"
         />
 
-        {/* Gradiente escuro à esquerda para legibilidade impecável dos textos */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#10171D] via-[#10171D]/75 md:via-[#10171D]/55 to-transparent" />
+        {/* Mobile: véu escuro vertical para legibilidade do texto sobre a imagem */}
+        <div className="absolute inset-0 lg:hidden bg-gradient-to-b from-[#10171D]/60 via-[#10171D]/75 to-[#10171D]/95" />
+
+        {/* Desktop: gradiente escuro à esquerda para legibilidade impecável dos textos */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#10171D] via-[#10171D]/75 to-transparent" />
 
         {/* Vinheta inferior sutil */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#10171D]/50 to-transparent" />
@@ -43,22 +46,6 @@ export function Hero({ onExploreClick }: HeroProps) {
 
       {/* Conteúdo Central */}
       <div className="relative z-10 w-full max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12">
-        {/* Mobile: Imagem de fundo/destaque visual que aparece primeiro, antes do texto */}
-        <div className="block lg:hidden w-full mb-6 sm:mb-8">
-          <div className="relative w-full h-[260px] sm:h-[320px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0b1014]">
-            <Image
-              src="/images/hero_manaus_map.jpg"
-              alt="Mapa luminoso e rios da Amazônia conectando a floresta e a cidade"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 800px"
-              className="object-cover object-center brightness-[1.0] contrast-[1.08]"
-            />
-            {/* Gradiente inferior para transição elegante */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#10171D]/70 via-transparent to-transparent pointer-events-none" />
-          </div>
-        </div>
-
         <div className="max-w-[780px] space-y-6 sm:space-y-8">
           {/* Eyebrow superior com traço lime */}
           <div className="inline-flex items-center gap-2.5">
