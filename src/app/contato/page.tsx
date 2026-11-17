@@ -127,8 +127,8 @@ export default function ContatoPage() {
                     <span className="text-xs font-semibold tracking-wider uppercase text-[#84b306]">
                       E-mail Institucional
                     </span>
-                    <p className="text-lg font-bold text-[#10171D]">
-                      contato@keepamazon.com.br
+                    <p className="text-lg font-bold text-[#10171D] break-all">
+                      keepamazonfullspectrum@gmail.com
                     </p>
                     <p className="text-xs text-[#666B70]">
                       Para envio de propostas, parcerias institucionais e projetos corporativos.
@@ -194,7 +194,7 @@ export default function ContatoPage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    href="mailto:contato@keepamazon.com.br"
+                    href="mailto:keepamazonfullspectrum@gmail.com"
                   >
                     Enviar e-mail
                   </Button>

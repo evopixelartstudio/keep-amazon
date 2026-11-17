@@ -265,11 +265,11 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
               {/* E-mail */}
               <li>
                 <a
-                  href="mailto:contato@keepamazon.com.br"
+                  href="mailto:keepamazonfullspectrum@gmail.com"
                   className="flex items-center gap-3 hover:text-[#10171D] transition-colors"
                 >
                   <MailIcon className="w-[18px] h-[18px] text-[#10171D] flex-shrink-0" />
-                  <span>contato@keepamazon.com.br</span>
+                  <span className="break-all">keepamazonfullspectrum@gmail.com</span>
                 </a>
               </li>
 

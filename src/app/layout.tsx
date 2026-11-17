@@ -106,7 +106,7 @@ export default function RootLayout({
     url: siteUrl,
     logo: `${siteUrl}/images/logo.png`,
     image: `${siteUrl}/images/hero_manaus_map.jpg`,
-    email: "contato@keepamazon.com.br",
+    email: "keepamazonfullspectrum@gmail.com",
     telephone: "+55-92-99999-9810",
     sameAs: [
       "https://instagram.com/keepamazon",
@@ -125,7 +125,7 @@ export default function RootLayout({
       "@type": "ContactPoint",
       contactType: "customer service",
       telephone: "+55-92-99999-9810",
-      email: "contato@keepamazon.com.br",
+      email: "keepamazonfullspectrum@gmail.com",
       availableLanguage: ["Portuguese"],
     },
     knowsAbout: [

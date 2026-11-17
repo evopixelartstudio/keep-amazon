@@ -15,7 +15,7 @@ A Keep Amazon conecta a floresta, as pessoas e novas oportunidades. Atua em quat
 
 - Sede: Av. Djalma Batista, 1661 — Manaus, AM, 69050-010, Brasil
 - Atendimento: presencial em Manaus e online para todo o Brasil
-- E-mail: contato@keepamazon.com.br
+- E-mail: keepamazonfullspectrum@gmail.com
 - WhatsApp/Telefone: +55 (92) 99999-9810
 - Instagram: https://instagram.com/keepamazon
 

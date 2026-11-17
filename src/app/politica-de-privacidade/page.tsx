@@ -7,7 +7,7 @@ import { getSiteUrl } from "@/lib/site-url";
 
 const siteUrl = getSiteUrl();
 const LAST_UPDATED = "13 de novembro de 2026";
-const CONTACT_EMAIL = "contato@keepamazon.com.br";
+const CONTACT_EMAIL = "keepamazonfullspectrum@gmail.com";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
