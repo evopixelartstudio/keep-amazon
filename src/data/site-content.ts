@@ -117,6 +117,6 @@ export const INITIATIVES: InitiativeItem[] = [
 export const SOCIAL_LINKS = [
   { label: 'Instagram', href: 'https://instagram.com/keepamazon', icon: 'instagram' },
   { label: 'YouTube', href: 'https://youtube.com/@keepamazon', icon: 'youtube' },
-  { label: 'WhatsApp', href: 'https://wa.me/5592999999999', icon: 'message-circle' },
+  { label: 'WhatsApp', href: 'https://wa.me/5568981000548', icon: 'message-circle' },
 ];
 

@@ -167,16 +167,16 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
             {/* Ícones em caixas escuras arredondadas */}
             <div className="flex items-center gap-2.5 pt-1">
               <a
-                href="tel:+5592999999810"
-                aria-label="Ligue para nós via Telefone"
-                title="Telefone"
+                href="https://wa.me/5568981000548" target="_blank" rel="noopener noreferrer"
+                aria-label="Fale conosco pelo WhatsApp"
+                title="WhatsApp"
                 className="w-9 h-9 rounded-lg bg-[#10171D] text-white flex items-center justify-center hover:bg-[#C8F31D] hover:text-[#10171D] transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
               >
                 <PhoneIcon className="w-4 h-4" />
               </a>
 
               <a
-                href="https://wa.me/5592999999810"
+                href="https://wa.me/5568981000548"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Fale conosco pelo WhatsApp"
@@ -235,24 +235,24 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
               {/* WhatsApp */}
               <li>
                 <a
-                  href="https://wa.me/5592999999810"
+                  href="https://wa.me/5568981000548"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 hover:text-[#10171D] transition-colors"
                 >
                   <WhatsAppIcon className="w-[18px] h-[18px] text-[#10171D] flex-shrink-0" />
-                  <span>(92) 99999-9810</span>
+                  <span>(68) 98100-0548</span>
                 </a>
               </li>
 
               {/* Telefone */}
               <li>
                 <a
-                  href="tel:+5592999999810"
+                  href="https://wa.me/5568981000548" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 hover:text-[#10171D] transition-colors"
                 >
                   <PhoneIcon className="w-[18px] h-[18px] text-[#10171D] flex-shrink-0" />
-                  <span>(92) 99999-9810</span>
+                  <span>(68) 98100-0548</span>
                 </a>
               </li>
 
@@ -276,7 +276,7 @@ export function Footer({ onOpenInterestModal }: FooterProps) {
               {/* Endereço */}
               <li className="flex items-start gap-3 leading-snug">
                 <MapPinIcon className="w-[18px] h-[18px] text-[#10171D] flex-shrink-0 mt-0.5" />
-                <span>Av. Djalma Batista, 1661 - Manaus, AM, 69050-010</span>
+                <span>Amazônia - Brasil</span>
               </li>
 
               {/* Atendimento Online e para todo o Brasil */}

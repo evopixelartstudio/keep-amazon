@@ -60,8 +60,7 @@ const SECTIONS: PolicySection[] = [
       <>
         <p>
           A Keep Amazon é a controladora dos dados pessoais tratados por meio
-          deste site, com sede na Av. Djalma Batista, 1661 — Manaus/AM, CEP
-          69050-010.
+          deste site, com atuação na Amazônia - Brasil.
         </p>
         <p>
           Para qualquer assunto relacionado a privacidade e proteção de dados,

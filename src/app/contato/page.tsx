@@ -11,12 +11,10 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   title: "Contato e Parcerias | Keep Amazon",
   description:
-    "Fale com a Keep Amazon em Manaus. Conecte sua empresa a projetos sustentáveis, palestras sobre bioeconomia e produtos regionais da Amazônia.",
+    "Fale com a Keep Amazon. Conecte sua empresa a projetos sustentáveis, palestras sobre bioeconomia e produtos regionais da Amazônia.",
   keywords: [
     "contato Keep Amazon",
-    "bioeconomia em Manaus",
     "projetos sustentáveis para empresas",
-    "produtos amazônicos em Manaus",
     "parcerias sustentáveis Amazônia",
   ],
   alternates: {
@@ -35,7 +33,7 @@ export default function ContatoPage() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contato e Parcerias - Keep Amazon",
-    description: "Canais de contato oficial da Keep Amazon em Manaus/AM.",
+    description: "Canais de contato oficial da Keep Amazon.",
     url: `${siteUrl}/contato`,
   };
 
@@ -97,7 +95,7 @@ export default function ContatoPage() {
                       </span>
                     </>
                   }
-                  description="Escolha o canal mais ágil para seu primeiro contato com nosso time em Manaus."
+                  description="Escolha o canal mais ágil para seu primeiro contato com nosso time."
                 />
 
                 <div className="space-y-5">
@@ -106,14 +104,14 @@ export default function ContatoPage() {
                       WhatsApp & Telefone
                     </span>
                     <p className="text-lg font-bold text-[#10171D]">
-                      (92) 99999-9810
+                      (68) 98100-0548
                     </p>
                     <p className="text-xs text-[#666B70]">
                       Atendimento rápido para dúvidas, orçamentos e agendamentos.
                     </p>
                     <div className="pt-2">
                       <a
-                        href="https://wa.me/5592999999810"
+                        href="https://wa.me/5568981000548"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-[#84b306] hover:underline"
@@ -140,10 +138,10 @@ export default function ContatoPage() {
                       Sede Regional
                     </span>
                     <p className="text-base font-bold text-[#10171D]">
-                      Av. Djalma Batista, 1661 - Manaus, AM, 69050-010
+                      📍 Amazônia - Brasil
                     </p>
                     <p className="text-xs text-[#666B70]">
-                      Atendimento presencial em Manaus e remoto para todo o Brasil.
+                      Atendimento na Amazônia e remoto para todo o Brasil.
                     </p>
                   </div>
                 </div>
@@ -187,7 +185,7 @@ export default function ContatoPage() {
                     variant="dark"
                     size="lg"
                     withArrow
-                    href="https://wa.me/5592999999810"
+                    href="https://wa.me/5568981000548"
                   >
                     Conversar via WhatsApp
                   </Button>

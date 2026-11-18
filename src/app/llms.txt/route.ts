@@ -9,14 +9,14 @@ export function GET() {
 
   const body = `# Keep Amazon
 
-> Iniciativa de Manaus (AM, Brasil) dedicada à bioeconomia amazônica: valoriza produtos regionais da Amazônia, promove educação ambiental e leva soluções sustentáveis, como estantes vivas de hortaliças, a empresas, escolas e comunidades.
+> Iniciativa da Amazônia (Brasil) dedicada à bioeconomia amazônica: valoriza produtos regionais da Amazônia, promove educação ambiental e leva soluções sustentáveis, como estantes vivas de hortaliças, a empresas, escolas e comunidades.
 
 A Keep Amazon conecta a floresta, as pessoas e novas oportunidades. Atua em quatro frentes: produtos regionais com procedência, educação e conhecimento, conexão e parcerias com produtores locais, e certificação e confiança. Orienta suas iniciativas pelos 17 Objetivos de Desenvolvimento Sustentável (ODS) da ONU.
 
-- Sede: Av. Djalma Batista, 1661 — Manaus, AM, 69050-010, Brasil
-- Atendimento: presencial em Manaus e online para todo o Brasil
+- Localização: Amazônia - Brasil
+- Atendimento: na Amazônia e online para todo o Brasil
 - E-mail: keepamazonfullspectrum@gmail.com
-- WhatsApp/Telefone: +55 (92) 99999-9810
+- WhatsApp/Telefone: +55 (68) 98100-0548
 - Instagram: https://instagram.com/keepamazon
 
 ## Páginas principais

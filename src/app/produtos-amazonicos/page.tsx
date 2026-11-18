@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     "produtos regionais amazônicos",
     "produtos sustentáveis",
     "produtos naturais da Amazônia",
-    "produtos amazônicos em Manaus",
     "bioeconomia amazônica",
     "biodiversidade amazônica",
   ],
@@ -102,7 +101,7 @@ export default function ProdutosAmazonicosPage() {
     {
       title: "Incentivo aos Produtores Locais",
       description:
-        "Remuneração justa e apoio direto às famílias e cooperativas da região de Manaus e do Amazonas, fortalecendo a economia de base.",
+        "Remuneração justa e apoio direto às famílias e cooperativas da região amazônica, fortalecendo a economia de base.",
     },
     {
       title: "Conservação e Manejo Consciente",

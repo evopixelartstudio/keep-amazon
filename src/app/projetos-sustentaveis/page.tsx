@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "educação ambiental para empresas",
     "sustentabilidade na Amazônia",
     "bioeconomia amazônica",
-    "sustentabilidade em Manaus",
   ],
   alternates: {
     canonical: `${siteUrl}/projetos-sustentaveis`,

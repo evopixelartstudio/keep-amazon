@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "produtos regionais amazônicos",
     "educação ambiental para empresas",
     "bioeconomia amazônica",
-    "sustentabilidade em Manaus",
   ],
   alternates: {
     canonical: `${siteUrl}/ta-na-mao`,
@@ -236,7 +235,7 @@ export default function TaNaMaoPage() {
               Transforme seu ambiente com uma Estante Viva Tá na Mão
             </h2>
             <p className="text-base text-[#666B70] max-w-2xl mx-auto leading-relaxed">
-              Consulte nossa disponibilidade de instalação em Manaus e planos com acompanhamento de manutenção.
+              Consulte nossa disponibilidade de instalação na Amazônia e planos com acompanhamento de manutenção.
             </p>
             <div className="pt-2">
               <Button variant="dark" size="lg" withArrow href="/contato">

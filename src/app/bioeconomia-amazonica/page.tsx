@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "desenvolvimento sustentável na Amazônia",
     "economia sustentável na Amazônia",
     "biodiversidade amazônica",
-    "bioeconomia em Manaus",
     "sustentabilidade na Amazônia",
     "consumo consciente",
   ],

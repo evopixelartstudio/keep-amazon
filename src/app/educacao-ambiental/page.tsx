@@ -219,7 +219,7 @@ export default function EducacaoAmbientalPage() {
               Leve uma experiência transformadora para sua instituição
             </h2>
             <p className="text-base text-[#666B70] max-w-2xl mx-auto leading-relaxed">
-              Atendemos empresas em Manaus e em todo o território nacional com opções presenciais e projetos integrados de sustentabilidade.
+              Atendemos empresas na Amazônia e em todo o território nacional com opções presenciais e projetos integrados de sustentabilidade.
             </p>
             <div className="pt-2">
               <Button variant="dark" size="lg" withArrow href="/contato">
