@@ -101,7 +101,7 @@ export default function RootLayout({
     description:
       "Iniciativa dedicada à bioeconomia amazônica, valorização de produtos regionais e soluções sustentáveis para empresas e sociedade.",
     url: siteUrl,
-    logo: `${siteUrl}/images/logo.png`,
+    logo: `${siteUrl}/images/logo-keep-amazon.png`,
     image: `${siteUrl}/images/hero_manaus_map.jpg`,
     email: "keepamazonfullspectrum@gmail.com",
     telephone: "+55-68-98100-0548",
