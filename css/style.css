@@ -283,7 +283,7 @@ a {
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 56px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -291,7 +291,7 @@ a {
 
 @media (min-width: 992px) {
   .brand-logo-img {
-    height: 56px;
+    height: 64px;
   }
 }
 
@@ -1967,4 +1967,8 @@ a {
   .hero-section {
     padding-top: 105px;
   }
+}
+
+.brand-logo.brand-logo-dark .brand-logo-img {
+  height: 88px;
 }

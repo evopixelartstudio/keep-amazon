@@ -22,10 +22,10 @@ export function BrandLogo({ className = "", theme = "light" }: BrandLogoProps) {
       <Image
         src={src}
         alt="Keep Amazon"
-        width={800}
-        height={417}
-        sizes="120px"
-        className="h-12 lg:h-14 w-auto transition-transform duration-300 group-hover:scale-[1.03]"
+        width={600}
+        height={600}
+        sizes="80px"
+        className="h-14 lg:h-16 w-auto transition-transform duration-300 group-hover:scale-[1.03]"
         priority
       />
     </Link>
