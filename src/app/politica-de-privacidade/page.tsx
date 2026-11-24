@@ -37,7 +37,7 @@ const SECTIONS: PolicySection[] = [
     content: (
       <>
         <p>
-          A <strong>Keep Amazon</strong> (&quot;nós&quot;) respeita a sua
+          <strong>A Keep Amazon</strong> (&quot;nós&quot;) respeita a sua
           privacidade e está comprometida com a proteção dos dados pessoais de
           todas as pessoas que acessam este site, utilizam nossos formulários,
           baixam o jogo <em>Word Amazon Gamer</em> ou se relacionam com nossas

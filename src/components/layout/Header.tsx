@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Search, Menu, X } from "lucide-react";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Button } from "@/components/ui/Button";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 interface HeaderProps {
   onOpenInterestModal?: () => void;
@@ -71,7 +72,7 @@ export function Header({ onOpenInterestModal }: HeaderProps) {
           {/* Navegação Desktop */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden lg:flex items-center gap-6 xl:gap-8"
+            className="hidden lg:flex items-center gap-5 xl:gap-8"
           >
             {navItems.map((item) => (
               <Link
@@ -86,9 +87,12 @@ export function Header({ onOpenInterestModal }: HeaderProps) {
           </nav>
 
           {/* Ações à Direita: Busca e CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+            {/* Seletor de idioma (bandeiras) */}
+            <LanguageSwitcher />
+
             {/* Campo de Busca Visual Retrátil */}
-            <div className="relative flex items-center">
+            <div className="relative hidden xl:flex items-center">
               {searchOpen ? (
                 <div className="flex items-center bg-[#10171D]/80 border border-white/20 rounded-full px-3 py-1.5 backdrop-blur-sm animate-in fade-in zoom-in-95 duration-200">
                   <Search className="w-4 h-4 text-slate-300 mr-2 flex-shrink-0" />
@@ -137,7 +141,8 @@ export function Header({ onOpenInterestModal }: HeaderProps) {
           </div>
 
           {/* Botão Hamburger Mobile */}
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+            <LanguageSwitcher />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}

@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { getSiteUrl } from "@/lib/site-url";
 import { CookieBanner } from "@/components/ui/CookieBanner";
+import { PageTranslator } from "@/components/ui/PageTranslator";
 
 const siteUrl = getSiteUrl();
 const GTM_ID = "GTM-WT3738HT";
@@ -181,6 +182,7 @@ export default function RootLayout({
         {children}
 
         <CookieBanner />
+        <PageTranslator />
 
         {/* dataLayer + Consent Mode v2 (LGPD) + Google Analytics 4 (gtag) + evento inicial do GTM */}
         <Script id="gtag-init" strategy="afterInteractive">
