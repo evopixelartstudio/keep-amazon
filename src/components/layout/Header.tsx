@@ -65,21 +65,21 @@ export function Header({ onOpenInterestModal }: HeaderProps) {
             : "bg-[#10171D]/80 backdrop-blur-sm py-4 sm:py-5 border-b border-white/5"
         }`}
       >
-        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-6 xl:px-12 flex items-center justify-between gap-4">
           {/* Logotipo Keep Amazon */}
           <BrandLogo theme="light" />
 
           {/* Navegação Desktop */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden lg:flex items-center gap-5 xl:gap-8"
+            className="hidden lg:flex items-center gap-4 xl:gap-8"
           >
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-medium text-slate-200 hover:text-[#C8F31D] transition-colors duration-200 tracking-wide"
+                className="whitespace-nowrap text-sm font-medium text-slate-200 hover:text-[#C8F31D] transition-colors duration-200 tracking-wide"
               >
                 {item.label}
               </Link>
@@ -134,6 +134,7 @@ export function Header({ onOpenInterestModal }: HeaderProps) {
               variant="lime"
               size="md"
               withArrow
+              className="whitespace-nowrap"
               onClick={onOpenInterestModal}
             >
               Aderir agora
