@@ -366,6 +366,78 @@ a {
   color: var(--primary-lime);
 }
 
+/* Seletor de idioma */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background-color: rgba(16, 23, 29, 0.35);
+}
+
+.lang-btn {
+  min-width: 34px;
+  height: 28px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #e2e8f0;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: var(--primary-lime);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--primary-lime);
+  outline-offset: 2px;
+}
+
+.lang-btn.is-active {
+  background-color: var(--primary-lime);
+  color: var(--dark-ink);
+}
+
+.lang-switch--mobile {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.header-container > .brand-logo {
+  flex-shrink: 0;
+}
+
+/* Telas médias: abre espaço para o seletor de idioma no header */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .nav-desktop {
+    gap: 18px;
+    margin: 0 16px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .search-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .lang-switch--mobile {
+    display: none;
+  }
+}
+
 .btn-hamburger {
   display: flex;
   background: transparent;

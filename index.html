@@ -39,17 +39,23 @@
 
       <!-- Menu Desktop -->
       <nav class="nav-desktop" aria-label="Navegação Principal">
-        <a href="#inicio" class="nav-link">Início</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#iniciativas" class="nav-link">Iniciativas</a>
-        <a href="#produtos" class="nav-link">Produtos</a>
-        <a href="#adesao" class="nav-link" data-open-modal="interest">Adesão</a>
-        <a href="#contato" class="nav-link">Contato</a>
+        <a href="#inicio" class="nav-link" data-i18n="nav.home">Início</a>
+        <a href="#sobre" class="nav-link" data-i18n="nav.about">Sobre</a>
+        <a href="#iniciativas" class="nav-link" data-i18n="nav.initiatives">Iniciativas</a>
+        <a href="#produtos" class="nav-link" data-i18n="nav.products">Produtos</a>
+        <a href="#adesao" class="nav-link" data-open-modal="interest" data-i18n="nav.join">Adesão</a>
+        <a href="#contato" class="nav-link" data-i18n="nav.contact">Contato</a>
       </nav>
 
       <!-- Ações: Busca Visual & Botão Lime -->
       <div class="header-actions">
-        <button class="search-btn" aria-label="Pesquisar" type="button">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language / Idioma">
+          <button type="button" class="lang-btn" data-lang="pt" lang="pt-BR" aria-label="Português">PT</button>
+          <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" lang="es" aria-label="Español">ES</button>
+        </div>
+
+        <button class="search-btn" data-i18n-aria-label="aria.search" aria-label="Pesquisar" type="button">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -57,7 +63,7 @@
         </button>
 
         <a href="#adesao" class="btn btn-lime" data-open-modal="interest">
-          <span>Aderir agora</span>
+          <span data-i18n="cta.joinNow">Aderir agora</span>
           <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="7" y1="17" x2="17" y2="7"></line>
             <polyline points="7 7 17 7 17 17"></polyline>
@@ -65,8 +71,15 @@
         </a>
       </div>
 
+      <!-- Seletor de idioma (mobile) -->
+      <div class="lang-switch lang-switch--mobile" role="group" aria-label="Idioma / Language / Idioma">
+        <button type="button" class="lang-btn" data-lang="pt" lang="pt-BR" aria-label="Português">PT</button>
+        <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" lang="es" aria-label="Español">ES</button>
+      </div>
+
       <!-- Botão Hambúrguer Mobile -->
-      <button class="btn-hamburger" aria-label="Abrir menu" aria-expanded="false" type="button">
+      <button class="btn-hamburger" data-i18n-aria-label="aria.openMenu" aria-label="Abrir menu" aria-expanded="false" type="button">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <line x1="4" y1="6" x2="20" y2="6"></line>
@@ -79,22 +92,22 @@
   <!-- Menu Drawer Mobile -->
   <div class="mobile-drawer" id="mobileDrawer">
     <nav class="nav-mobile" aria-label="Menu Mobile">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#iniciativas">Iniciativas</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#adesao" data-open-modal="interest">Adesão</a>
-      <a href="#contato">Contato</a>
+      <a href="#inicio" data-i18n="nav.home">Início</a>
+      <a href="#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="#iniciativas" data-i18n="nav.initiatives">Iniciativas</a>
+      <a href="#produtos" data-i18n="nav.products">Produtos</a>
+      <a href="#adesao" data-open-modal="interest" data-i18n="nav.join">Adesão</a>
+      <a href="#contato" data-i18n="nav.contact">Contato</a>
     </nav>
     <div>
       <a href="#adesao" class="btn btn-lime" style="width: 100%;" data-open-modal="interest">
-        <span>Aderir agora</span>
+        <span data-i18n="cta.joinNow">Aderir agora</span>
         <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="7" y1="17" x2="17" y2="7"></line>
           <polyline points="7 7 17 7 17 17"></polyline>
         </svg>
       </a>
-      <p style="text-align: center; font-size: 12px; color: #94a3b8; margin-top: 16px;">
+      <p style="text-align: center; font-size: 12px; color: #94a3b8; margin-top: 16px;" data-i18n="drawer.tagline">
         Floresta · Pessoas · Futuro
       </p>
     </div>
@@ -114,7 +127,7 @@
       <div class="container" style="position: relative; z-index: 10; width: 100%;">
         <div class="hero-content">
 
-          <h1 class="hero-title hero-anim-title">
+          <h1 class="hero-title hero-anim-title" data-i18n="hero.title">
             A floresta<br>
             gera valor.<br>
             <span class="title-pill-wrap">
@@ -123,7 +136,7 @@
             </span>
           </h1>
 
-          <p class="hero-description hero-anim-desc">
+          <p class="hero-description hero-anim-desc" data-i18n="hero.desc">
             A Keep Amazon é uma iniciativa que aproxima a floresta da cidade,
             valorizando produtos regionais, saberes locais e novas oportunidades
             por meio da bioeconomia, da inovação e do consumo consciente.
@@ -131,15 +144,15 @@
 
           <div class="hero-actions hero-anim-cta">
             <a href="#sobre" class="btn btn-lime">
-              <span>Conheça a iniciativa</span>
+              <span data-i18n="hero.cta">Conheça a iniciativa</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
             </a>
-            <a href="https://wa.me/5568981000548?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Keep%20Amazon%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato pelo WhatsApp">
+            <a href="https://wa.me/5568981000548?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Keep%20Amazon%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="aria.whatsappContact" aria-label="Entrar em contato pelo WhatsApp">
               <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              <span>Entrar em contato</span>
+              <span data-i18n="hero.contact">Entrar em contato</span>
             </a>
           </div>
         </div>
@@ -151,17 +164,17 @@
          ========================================================================== -->
     <div class="marquee-section reveal-blur" aria-label="Destaques">
       <div class="marquee-track">
-        <div class="marquee-item">Produtos da nossa terra <span class="star">✱</span></div>
-        <div class="marquee-item">Conhecimento que transforma <span class="star">✱</span></div>
-        <div class="marquee-item">Desenvolvimento regional <span class="star">✱</span></div>
-        <div class="marquee-item">Bioeconomia na prática <span class="star">✱</span></div>
-        <div class="marquee-item">Da floresta para o mundo <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.1">Produtos da nossa terra <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.2">Conhecimento que transforma <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.3">Desenvolvimento regional <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.4">Bioeconomia na prática <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.5">Da floresta para o mundo <span class="star">✱</span></div>
         <!-- Duplicação para loop contínuo -->
-        <div class="marquee-item">Produtos da nossa terra <span class="star">✱</span></div>
-        <div class="marquee-item">Conhecimento que transforma <span class="star">✱</span></div>
-        <div class="marquee-item">Desenvolvimento regional <span class="star">✱</span></div>
-        <div class="marquee-item">Bioeconomia na prática <span class="star">✱</span></div>
-        <div class="marquee-item">Da floresta para o mundo <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.1">Produtos da nossa terra <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.2">Conhecimento que transforma <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.3">Desenvolvimento regional <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.4">Bioeconomia na prática <span class="star">✱</span></div>
+        <div class="marquee-item" data-i18n="marquee.5">Da floresta para o mundo <span class="star">✱</span></div>
       </div>
     </div>
 
@@ -173,24 +186,24 @@
         <div class="about-grid">
           <!-- Coluna Esquerda -->
           <div class="about-text-col">
-            <div class="section-eyebrow reveal-blur">SOBRE A KEEP AMAZON</div>
-            <h2 class="section-title reveal-blur delay-100" style="margin-bottom: 24px;">
+            <div class="section-eyebrow reveal-blur" data-i18n="about.eyebrow">SOBRE A KEEP AMAZON</div>
+            <h2 class="section-title reveal-blur delay-100" style="margin-bottom: 24px;" data-i18n="about.title">
               Mais que produtos,<br>
               um <span class="text-lime-highlight">movimento.</span>
             </h2>
-            <p class="reveal-blur delay-200">
+            <p class="reveal-blur delay-200" data-i18n="about.p1">
               Somos uma ponte entre a riqueza da Amazônia e o futuro sustentável.
               Atuamos para que produtos da floresta ganhem espaço, valor e novas
               possibilidades.
             </p>
-            <p class="reveal-blur delay-200">
+            <p class="reveal-blur delay-200" data-i18n="about.p2">
               Conectamos produtores, comunidades, empresas e consumidores,
               promovendo a bioeconomia como motor de desenvolvimento, inclusão
               e preservação.
             </p>
             <div class="reveal-blur delay-300">
               <a href="#adesao" class="btn btn-dark" data-open-modal="interest">
-                <span>Saiba mais</span>
+                <span data-i18n="cta.learnMore">Saiba mais</span>
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
@@ -211,8 +224,8 @@
                   <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
                 </svg>
               </div>
-              <h3 class="pillar-title">Produtos regionais</h3>
-              <p class="pillar-desc">Comercialização de itens da nossa biodiversidade, com qualidade, procedência e padrão de excelência.</p>
+              <h3 class="pillar-title" data-i18n="pillar.1.title">Produtos regionais</h3>
+              <p class="pillar-desc" data-i18n="pillar.1.desc">Comercialização de itens da nossa biodiversidade, com qualidade, procedência e padrão de excelência.</p>
             </div>
 
             <!-- 2. Educação e conhecimento -->
@@ -223,8 +236,8 @@
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </div>
-              <h3 class="pillar-title">Educação e conhecimento</h3>
-              <p class="pillar-desc">Conteúdo e experiências que aproximam a população urbana da floresta, da agroecologia e das práticas sustentáveis.</p>
+              <h3 class="pillar-title" data-i18n="pillar.2.title">Educação e conhecimento</h3>
+              <p class="pillar-desc" data-i18n="pillar.2.desc">Conteúdo e experiências que aproximam a população urbana da floresta, da agroecologia e das práticas sustentáveis.</p>
             </div>
 
             <!-- 3. Conexão e parcerias -->
@@ -237,8 +250,8 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3 class="pillar-title">Conexão e parcerias</h3>
-              <p class="pillar-desc">Articulação entre produtores, empresas, instituições e o setor público para ampliar o impacto da bioeconomia.</p>
+              <h3 class="pillar-title" data-i18n="pillar.3.title">Conexão e parcerias</h3>
+              <p class="pillar-desc" data-i18n="pillar.3.desc">Articulação entre produtores, empresas, instituições e o setor público para ampliar o impacto da bioeconomia.</p>
             </div>
 
             <!-- 4. Certificação e confiança -->
@@ -249,8 +262,8 @@
                   <polyline points="9 12 11 14 15 10"></polyline>
                 </svg>
               </div>
-              <h3 class="pillar-title">Certificação e confiança</h3>
-              <p class="pillar-desc">Incentivo à certificação de produtos e processos, garantindo segurança, transparência e valorização da produção regional.</p>
+              <h3 class="pillar-title" data-i18n="pillar.4.title">Certificação e confiança</h3>
+              <p class="pillar-desc" data-i18n="pillar.4.desc">Incentivo à certificação de produtos e processos, garantindo segurança, transparência e valorização da produção regional.</p>
             </div>
           </div>
         </div>
@@ -267,24 +280,24 @@
           <div class="tanamo-card-img-wrap reveal-scale-blur">
             <div class="corner-square-top-left" aria-hidden="true"></div>
             <div class="photo-box">
-              <img src="assets/03_muda_maos.png" alt="Mãos segurando com cuidado uma pequena muda em terra fértil amazônica">
+              <img src="assets/03_muda_maos.png" data-i18n-alt="alt.seedling" alt="Mãos segurando com cuidado uma pequena muda em terra fértil amazônica">
             </div>
           </div>
 
           <!-- Coluna 2: Conteúdo Central -->
           <div class="tanamo-content-col reveal-blur delay-100">
-            <div class="section-eyebrow">PROJETO EM DESTAQUE</div>
+            <div class="section-eyebrow" data-i18n="tanamao.eyebrow">PROJETO EM DESTAQUE</div>
             <h2 class="section-title">
               Tá na <span class="text-lime-highlight">Mão</span>
             </h2>
-            <p>
+            <p data-i18n="tanamao.desc">
               Uma estante viva, com hortaliças e produtos regionais, que une o
               útil ao educativo. O projeto Tá na Mão leva para perto das pessoas o
               que a Amazônia tem de melhor, com informações sobre origem, formas de
               uso e benefícios para o dia a dia.
             </p>
             <a href="#adesao" class="btn btn-dark" data-open-modal="interest">
-              <span>Saiba mais</span>
+              <span data-i18n="cta.learnMore">Saiba mais</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
@@ -295,7 +308,7 @@
           <!-- Coluna 3: Fotografia da Estante com detalhe lime inferior -->
           <div class="tanamo-card-img-wrap reveal-scale-blur delay-200">
             <div class="photo-box">
-              <img src="assets/04_estante_hortalicas.jpg" alt="Estante viva com cultivo de hortaliças e produtos regionais amazônicos">
+              <img src="assets/04_estante_hortalicas.jpg" data-i18n-alt="alt.shelf" alt="Estante viva com cultivo de hortaliças e produtos regionais amazônicos">
             </div>
             <div class="corner-square-bottom-left" aria-hidden="true"></div>
           </div>
@@ -311,20 +324,20 @@
         <!-- Topo da Seção -->
         <div class="initiatives-header">
           <div class="reveal-blur">
-            <div class="section-eyebrow">NOSSAS INICIATIVAS</div>
-            <h2 class="section-title">
+            <div class="section-eyebrow" data-i18n="init.eyebrow">NOSSAS INICIATIVAS</div>
+            <h2 class="section-title" data-i18n="init.title">
               Soluções para um<br>
               futuro mais <span class="text-lime-highlight">sustentável.</span>
             </h2>
           </div>
           <div class="initiatives-intro reveal-blur delay-100">
-            <p>
+            <p data-i18n="init.intro">
               A Keep Amazon oferece diferentes formas de participação e acesso aos
               nossos produtos e projetos. Escolha a que mais faz sentido para
               você e faça parte dessa transformação.
             </p>
             <a href="#adesao" class="btn btn-dark" data-open-modal="interest">
-              <span>Ver todas as opções</span>
+              <span data-i18n="init.cta">Ver todas as opções</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
@@ -345,8 +358,8 @@
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Com palestra</h3>
-              <p class="card-desc">Conhecimento que conecta e inspira.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.1.title">Com palestra</h3>
+              <p class="card-desc" data-i18n="card.1.desc">Conhecimento que conecta e inspira.</p>
             </div>
           </div>
 
@@ -358,8 +371,8 @@
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Somente instalação</h3>
-              <p class="card-desc">Estrutura e suporte para sua operação.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.2.title">Somente instalação</h3>
+              <p class="card-desc" data-i18n="card.2.desc">Estrutura e suporte para sua operação.</p>
             </div>
           </div>
 
@@ -374,8 +387,8 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Palestra + instalação</h3>
-              <p class="card-desc">Informação e implementação em uma proposta integrada.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.3.title">Palestra + instalação</h3>
+              <p class="card-desc" data-i18n="card.3.desc">Informação e implementação em uma proposta integrada.</p>
             </div>
           </div>
 
@@ -391,8 +404,8 @@
                   <polyline points="9 16 11 18 15 14"></polyline>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Manutenção em 4 meses</h3>
-              <p class="card-desc">Acompanhamento contínuo e suporte durante quatro meses.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.4.title">Manutenção em 4 meses</h3>
+              <p class="card-desc" data-i18n="card.4.desc">Acompanhamento contínuo e suporte durante quatro meses.</p>
             </div>
           </div>
 
@@ -408,8 +421,8 @@
                   <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Com brindes</h3>
-              <p class="card-desc">Mais valor para sua experiência com itens exclusivos.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.5.title">Com brindes</h3>
+              <p class="card-desc" data-i18n="card.5.desc">Mais valor para sua experiência com itens exclusivos.</p>
             </div>
           </div>
 
@@ -424,8 +437,8 @@
                   <line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
               </div>
-              <h3 class="card-title" style="margin-top: 14px;">Unbox</h3>
-              <p class="card-desc">Uma experiência completa desde o primeiro contato.</p>
+              <h3 class="card-title" style="margin-top: 14px;" data-i18n="card.6.title">Unbox</h3>
+              <p class="card-desc" data-i18n="card.6.desc">Uma experiência completa desde o primeiro contato.</p>
             </div>
           </div>
         </div>
@@ -439,17 +452,17 @@
       <div class="container">
         <div id="ods-heading" class="ods-header reveal-blur">
           <div>
-            <div class="section-eyebrow">AGENDA 2030 · ONU</div>
-            <h2 class="section-title">
+            <div class="section-eyebrow" data-i18n="ods.eyebrow">AGENDA 2030 · ONU</div>
+            <h2 class="section-title" data-i18n="ods.title">
               Os 17 Objetivos de <span class="text-lime-highlight">Desenvolvimento Sustentável</span>
             </h2>
-            <p class="ods-intro-text">
+            <p class="ods-intro-text" data-i18n="ods.intro">
               Os ODS são um apelo global da ONU para acabar com a pobreza, proteger o meio ambiente e o clima e garantir que as pessoas possam desfrutar de paz e prosperidade. A Keep Amazon orienta suas iniciativas por esses compromissos.
             </p>
           </div>
           <div class="ods-wheel-badge">
-            <img src="assets/ods/ods-wheel.png" alt="Mandala colorida dos 17 ODS da ONU" width="56" height="56" loading="lazy">
-            <span>Agenda 2030<br>Nações Unidas</span>
+            <img src="assets/ods/ods-wheel.png" data-i18n-alt="alt.odsWheel" alt="Mandala colorida dos 17 ODS da ONU" width="56" height="56" loading="lazy">
+            <span data-i18n="ods.badge">Agenda 2030<br>Nações Unidas</span>
           </div>
         </div>
 
@@ -461,10 +474,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #E5243B;"></span>
-                ODS 1
+                <span data-i18n="ods.tag" data-n="1">ODS 1</span>
               </span>
-              <h3 class="ods-card-title">Erradicação da Pobreza</h3>
-              <p class="ods-card-desc">Acabar com a pobreza em todas as suas formas, em todos os lugares, garantindo acesso a recursos, serviços básicos e proteção social.</p>
+              <h3 class="ods-card-title" data-i18n="ods.1.title">Erradicação da Pobreza</h3>
+              <p class="ods-card-desc" data-i18n="ods.1.desc">Acabar com a pobreza em todas as suas formas, em todos os lugares, garantindo acesso a recursos, serviços básicos e proteção social.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -474,10 +487,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #DDA63A;"></span>
-                ODS 2
+                <span data-i18n="ods.tag" data-n="2">ODS 2</span>
               </span>
-              <h3 class="ods-card-title">Fome Zero e Agricultura Sustentável</h3>
-              <p class="ods-card-desc">Acabar com a fome, alcançar a segurança alimentar, melhorar a nutrição e promover a agricultura sustentável e familiar.</p>
+              <h3 class="ods-card-title" data-i18n="ods.2.title">Fome Zero e Agricultura Sustentável</h3>
+              <p class="ods-card-desc" data-i18n="ods.2.desc">Acabar com a fome, alcançar a segurança alimentar, melhorar a nutrição e promover a agricultura sustentável e familiar.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -487,10 +500,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #4C9F38;"></span>
-                ODS 3
+                <span data-i18n="ods.tag" data-n="3">ODS 3</span>
               </span>
-              <h3 class="ods-card-title">Saúde e Bem-Estar</h3>
-              <p class="ods-card-desc">Assegurar uma vida saudável e promover o bem-estar para todas as pessoas, em todas as idades.</p>
+              <h3 class="ods-card-title" data-i18n="ods.3.title">Saúde e Bem-Estar</h3>
+              <p class="ods-card-desc" data-i18n="ods.3.desc">Assegurar uma vida saudável e promover o bem-estar para todas as pessoas, em todas as idades.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -500,10 +513,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #C5192D;"></span>
-                ODS 4
+                <span data-i18n="ods.tag" data-n="4">ODS 4</span>
               </span>
-              <h3 class="ods-card-title">Educação de Qualidade</h3>
-              <p class="ods-card-desc">Garantir educação inclusiva, equitativa e de qualidade, promovendo oportunidades de aprendizagem ao longo da vida.</p>
+              <h3 class="ods-card-title" data-i18n="ods.4.title">Educação de Qualidade</h3>
+              <p class="ods-card-desc" data-i18n="ods.4.desc">Garantir educação inclusiva, equitativa e de qualidade, promovendo oportunidades de aprendizagem ao longo da vida.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -513,10 +526,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #FF3A21;"></span>
-                ODS 5
+                <span data-i18n="ods.tag" data-n="5">ODS 5</span>
               </span>
-              <h3 class="ods-card-title">Igualdade de Gênero</h3>
-              <p class="ods-card-desc">Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas, eliminando discriminação e violência.</p>
+              <h3 class="ods-card-title" data-i18n="ods.5.title">Igualdade de Gênero</h3>
+              <p class="ods-card-desc" data-i18n="ods.5.desc">Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas, eliminando discriminação e violência.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -526,10 +539,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #26BDE2;"></span>
-                ODS 6
+                <span data-i18n="ods.tag" data-n="6">ODS 6</span>
               </span>
-              <h3 class="ods-card-title">Água Potável e Saneamento</h3>
-              <p class="ods-card-desc">Garantir disponibilidade e gestão sustentável da água e saneamento para todas as pessoas.</p>
+              <h3 class="ods-card-title" data-i18n="ods.6.title">Água Potável e Saneamento</h3>
+              <p class="ods-card-desc" data-i18n="ods.6.desc">Garantir disponibilidade e gestão sustentável da água e saneamento para todas as pessoas.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -539,10 +552,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #FCC30B;"></span>
-                ODS 7
+                <span data-i18n="ods.tag" data-n="7">ODS 7</span>
               </span>
-              <h3 class="ods-card-title">Energia Limpa e Acessível</h3>
-              <p class="ods-card-desc">Garantir acesso a fontes de energia confiáveis, sustentáveis, modernas e a preço acessível para todos.</p>
+              <h3 class="ods-card-title" data-i18n="ods.7.title">Energia Limpa e Acessível</h3>
+              <p class="ods-card-desc" data-i18n="ods.7.desc">Garantir acesso a fontes de energia confiáveis, sustentáveis, modernas e a preço acessível para todos.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -552,10 +565,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #A21942;"></span>
-                ODS 8
+                <span data-i18n="ods.tag" data-n="8">ODS 8</span>
               </span>
-              <h3 class="ods-card-title">Trabalho Decente e Crescimento Econômico</h3>
-              <p class="ods-card-desc">Promover crescimento econômico inclusivo e sustentável, emprego pleno e produtivo e trabalho digno para todos.</p>
+              <h3 class="ods-card-title" data-i18n="ods.8.title">Trabalho Decente e Crescimento Econômico</h3>
+              <p class="ods-card-desc" data-i18n="ods.8.desc">Promover crescimento econômico inclusivo e sustentável, emprego pleno e produtivo e trabalho digno para todos.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -565,10 +578,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #FD6925;"></span>
-                ODS 9
+                <span data-i18n="ods.tag" data-n="9">ODS 9</span>
               </span>
-              <h3 class="ods-card-title">Indústria, Inovação e Infraestrutura</h3>
-              <p class="ods-card-desc">Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação.</p>
+              <h3 class="ods-card-title" data-i18n="ods.9.title">Indústria, Inovação e Infraestrutura</h3>
+              <p class="ods-card-desc" data-i18n="ods.9.desc">Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -578,10 +591,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #DD1367;"></span>
-                ODS 10
+                <span data-i18n="ods.tag" data-n="10">ODS 10</span>
               </span>
-              <h3 class="ods-card-title">Redução das Desigualdades</h3>
-              <p class="ods-card-desc">Reduzir as desigualdades dentro dos países e entre eles, promovendo a inclusão social, econômica e política.</p>
+              <h3 class="ods-card-title" data-i18n="ods.10.title">Redução das Desigualdades</h3>
+              <p class="ods-card-desc" data-i18n="ods.10.desc">Reduzir as desigualdades dentro dos países e entre eles, promovendo a inclusão social, econômica e política.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -591,10 +604,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #FD9D24;"></span>
-                ODS 11
+                <span data-i18n="ods.tag" data-n="11">ODS 11</span>
               </span>
-              <h3 class="ods-card-title">Cidades e Comunidades Sustentáveis</h3>
-              <p class="ods-card-desc">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
+              <h3 class="ods-card-title" data-i18n="ods.11.title">Cidades e Comunidades Sustentáveis</h3>
+              <p class="ods-card-desc" data-i18n="ods.11.desc">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -604,10 +617,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #BF8B2E;"></span>
-                ODS 12
+                <span data-i18n="ods.tag" data-n="12">ODS 12</span>
               </span>
-              <h3 class="ods-card-title">Consumo e Produção Responsáveis</h3>
-              <p class="ods-card-desc">Assegurar padrões de produção e de consumo sustentáveis, reduzindo desperdícios e valorizando cadeias responsáveis.</p>
+              <h3 class="ods-card-title" data-i18n="ods.12.title">Consumo e Produção Responsáveis</h3>
+              <p class="ods-card-desc" data-i18n="ods.12.desc">Assegurar padrões de produção e de consumo sustentáveis, reduzindo desperdícios e valorizando cadeias responsáveis.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -617,10 +630,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #3F7E44;"></span>
-                ODS 13
+                <span data-i18n="ods.tag" data-n="13">ODS 13</span>
               </span>
-              <h3 class="ods-card-title">Ação Contra a Mudança Global do Clima</h3>
-              <p class="ods-card-desc">Tomar medidas urgentes para combater a mudança climática e seus impactos, fortalecendo a resiliência e a adaptação.</p>
+              <h3 class="ods-card-title" data-i18n="ods.13.title">Ação Contra a Mudança Global do Clima</h3>
+              <p class="ods-card-desc" data-i18n="ods.13.desc">Tomar medidas urgentes para combater a mudança climática e seus impactos, fortalecendo a resiliência e a adaptação.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -630,10 +643,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #0A97D9;"></span>
-                ODS 14
+                <span data-i18n="ods.tag" data-n="14">ODS 14</span>
               </span>
-              <h3 class="ods-card-title">Vida na Água</h3>
-              <p class="ods-card-desc">Conservar e usar de forma sustentável os oceanos, rios e recursos aquáticos para o desenvolvimento sustentável.</p>
+              <h3 class="ods-card-title" data-i18n="ods.14.title">Vida na Água</h3>
+              <p class="ods-card-desc" data-i18n="ods.14.desc">Conservar e usar de forma sustentável os oceanos, rios e recursos aquáticos para o desenvolvimento sustentável.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -643,10 +656,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #56C02B;"></span>
-                ODS 15
+                <span data-i18n="ods.tag" data-n="15">ODS 15</span>
               </span>
-              <h3 class="ods-card-title">Vida Terrestre</h3>
-              <p class="ods-card-desc">Proteger, recuperar e promover o uso sustentável das florestas e ecossistemas, deter a perda de biodiversidade e combater a desertificação.</p>
+              <h3 class="ods-card-title" data-i18n="ods.15.title">Vida Terrestre</h3>
+              <p class="ods-card-desc" data-i18n="ods.15.desc">Proteger, recuperar e promover o uso sustentável das florestas e ecossistemas, deter a perda de biodiversidade e combater a desertificação.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -656,10 +669,10 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #00689D;"></span>
-                ODS 16
+                <span data-i18n="ods.tag" data-n="16">ODS 16</span>
               </span>
-              <h3 class="ods-card-title">Paz, Justiça e Instituições Eficazes</h3>
-              <p class="ods-card-desc">Promover sociedades pacíficas e inclusivas, garantir acesso à justiça e construir instituições eficazes, responsáveis e transparentes.</p>
+              <h3 class="ods-card-title" data-i18n="ods.16.title">Paz, Justiça e Instituições Eficazes</h3>
+              <p class="ods-card-desc" data-i18n="ods.16.desc">Promover sociedades pacíficas e inclusivas, garantir acesso à justiça e construir instituições eficazes, responsáveis e transparentes.</p>
             </div>
           </li>
           <li class="ods-card reveal-blur">
@@ -669,15 +682,15 @@
             <div class="ods-card-content">
               <span class="ods-card-tag">
                 <span class="ods-color-dot" style="background-color: #19486A;"></span>
-                ODS 17
+                <span data-i18n="ods.tag" data-n="17">ODS 17</span>
               </span>
-              <h3 class="ods-card-title">Parcerias e Meios de Implementação</h3>
-              <p class="ods-card-desc">Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
+              <h3 class="ods-card-title" data-i18n="ods.17.title">Parcerias e Meios de Implementação</h3>
+              <p class="ods-card-desc" data-i18n="ods.17.desc">Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
             </div>
           </li>
         </ol>
 
-        <p class="ods-source-note">
+        <p class="ods-source-note" data-i18n="ods.source">
           Fonte: Organização das Nações Unidas (ONU) — Agenda 2030 para o Desenvolvimento Sustentável. Imagens oficiais dos Objetivos de Desenvolvimento Sustentável.
         </p>
       </div>
@@ -694,36 +707,36 @@
             <div class="game-info-col">
               <div class="game-badge">
                 <span class="game-badge-dot"></span>
-                <span>JOGO EDUCATIVO · EXPERIÊNCIA INTERATIVA</span>
+                <span data-i18n="game.badge">JOGO EDUCATIVO · EXPERIÊNCIA INTERATIVA</span>
               </div>
 
               <h2 class="game-title">
                 Word Amazon <span class="text-lime-bright">Gamer</span>
               </h2>
 
-              <p class="game-desc">
+              <p class="game-desc" data-i18n="game.desc">
                 Desafie seu conhecimento sobre a fauna, a flora e os saberes da Amazônia de forma dinâmica e interativa. Aprenda palavras da bioeconomia e mergulhe na floresta através de um jogo lúdico para todas as idades.
               </p>
 
               <div class="game-features-list">
                 <span class="game-feature-tag">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  Vocabulário Regional
+                  <span data-i18n="game.f1">Vocabulário Regional</span>
                 </span>
                 <span class="game-feature-tag">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  100% Gratuito
+                  <span data-i18n="game.f2">100% Gratuito</span>
                 </span>
                 <span class="game-feature-tag">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  Android & PC
+                  <span data-i18n="game.f3">Android & PC</span>
                 </span>
               </div>
 
               <!-- Botões de Download -->
               <div class="game-download-actions">
                 <!-- Botão Android -->
-                <a href="https://drive.google.com/drive/folders/1TAFdggIPwaRMF7HIhsa_hN0I8i9a-82X" target="_blank" rel="noopener noreferrer" class="btn-download btn-download-android" title="Baixar APK para Android no Google Drive">
+                <a href="https://drive.google.com/drive/folders/1TAFdggIPwaRMF7HIhsa_hN0I8i9a-82X" target="_blank" rel="noopener noreferrer" class="btn-download btn-download-android" data-i18n-title="game.titleAndroid" title="Baixar APK para Android no Google Drive">
                   <div class="btn-download-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002s.4482-.9997.9993-.9997c.5521 0 .9997.4481.9997.9997 0 .5516-.4476 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002s.4482-.9997.9993-.9997c.5521 0 .9997.4481.9997.9997 0 .5516-.4476 1.0002-.9997 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.0827 12 8.0827s-3.5902.3289-5.1368.867L4.8409 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
@@ -739,7 +752,7 @@
                 </a>
 
                 <!-- Botão Windows -->
-                <a href="https://drive.google.com/drive/folders/124gMXnDEqdnZtVmuJpSFpoECYdx4aqPu" target="_blank" rel="noopener noreferrer" class="btn-download btn-download-windows" title="Baixar para Windows Desktop no Google Drive">
+                <a href="https://drive.google.com/drive/folders/124gMXnDEqdnZtVmuJpSFpoECYdx4aqPu" target="_blank" rel="noopener noreferrer" class="btn-download btn-download-windows" data-i18n-title="game.titleWindows" title="Baixar para Windows Desktop no Google Drive">
                   <div class="btn-download-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75V22.05L0 20.7m10.949-8.1H24V24l-13.051-1.8"/>
@@ -762,9 +775,9 @@
                 <div class="game-preview-header">
                   <div class="game-preview-status">
                     <span class="status-indicator"></span>
-                    <span>DISPONÍVEL</span>
+                    <span data-i18n="game.available">DISPONÍVEL</span>
                   </div>
-                  <span class="game-version-pill">v1.0 · Multiplataforma</span>
+                  <span class="game-version-pill" data-i18n="game.version">v1.0 · Multiplataforma</span>
                 </div>
 
                 <div class="game-tiles-container">
@@ -808,8 +821,8 @@
                     </svg>
                   </div>
                   <div class="game-preview-caption">
-                    <strong>Aprenda jogando</strong>
-                    <span>Descubra a floresta letra por letra</span>
+                    <strong data-i18n="game.learn">Aprenda jogando</strong>
+                    <span data-i18n="game.discover">Descubra a floresta letra por letra</span>
                   </div>
                 </div>
               </div>
@@ -825,7 +838,7 @@
     <section class="cta-section" id="adesao">
       <!-- Imagem de Fundo com Degradê à Esquerda -->
       <div class="cta-bg-wrap">
-        <img src="assets/02_maos_frutos.png" alt="Mãos segurando frutos regionais da biodiversidade amazônica" class="cta-bg-img">
+        <img src="assets/02_maos_frutos.png" data-i18n-alt="alt.fruits" alt="Mãos segurando frutos regionais da biodiversidade amazônica" class="cta-bg-img">
         <div class="cta-gradient-overlay"></div>
       </div>
 
@@ -833,8 +846,8 @@
         <div class="cta-content-grid">
           <!-- Coluna 1: Título -->
           <div class="reveal-blur">
-            <div class="section-eyebrow eyebrow-light">FAÇA PARTE</div>
-            <h2 class="section-title title-light">
+            <div class="section-eyebrow eyebrow-light" data-i18n="join.eyebrow">FAÇA PARTE</div>
+            <h2 class="section-title title-light" data-i18n="join.title">
               Juntos, podemos<br>
               ir <span class="text-lime-bright">mais longe.</span>
             </h2>
@@ -842,13 +855,13 @@
 
           <!-- Coluna 2: Texto & CTA -->
           <div class="cta-text-col reveal-blur delay-100">
-            <p>
+            <p data-i18n="join.desc">
               Seja um parceiro, um produtor, um apoiador ou um consumidor
               consciente. A Keep Amazon é para todos que acreditam em um futuro
               mais justo, sustentável e conectado com a nossa terra.
             </p>
             <a href="#adesao" class="btn btn-lime" data-open-modal="interest">
-              <span>Quero fazer parte</span>
+              <span data-i18n="join.cta">Quero fazer parte</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
@@ -869,7 +882,7 @@
         <div class="brand-logo">
           <img src="assets/logo-keep-amazon.png" alt="Keep Amazon" class="brand-logo-img" width="600" height="600">
         </div>
-        <button class="modal-close-btn" aria-label="Fechar janela" type="button">
+        <button class="modal-close-btn" data-i18n-aria-label="aria.close" aria-label="Fechar janela" type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -879,23 +892,23 @@
 
       <div class="modal-body">
         <div class="modal-body-header">
-          <div class="section-eyebrow" style="margin-bottom: 4px;">ADESÃO & PARCERIAS</div>
-          <h3 id="modalTitle">Faça parte da Keep Amazon</h3>
-          <p>Preencha os dados abaixo para manifestar seu interesse nas iniciativas da bioeconomia.</p>
+          <div class="section-eyebrow" style="margin-bottom: 4px;" data-i18n="modal.eyebrow">ADESÃO & PARCERIAS</div>
+          <h3 id="modalTitle" data-i18n="modal.title">Faça parte da Keep Amazon</h3>
+          <p data-i18n="modal.desc">Preencha os dados abaixo para manifestar seu interesse nas iniciativas da bioeconomia.</p>
         </div>
 
         <div id="formFeedback" class="form-feedback"></div>
 
         <form id="interestForm" novalidate>
           <div class="form-group">
-            <label class="form-label" for="fullName">Nome completo *</label>
-            <input type="text" id="fullName" class="form-input" placeholder="Seu nome ou da sua organização" required>
+            <label class="form-label" for="fullName" data-i18n="form.name">Nome completo *</label>
+            <input type="text" id="fullName" class="form-input" data-i18n-placeholder="form.namePh" placeholder="Seu nome ou da sua organização" required>
             <span class="field-error-msg" id="error-fullName"></span>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="email">E-mail *</label>
+              <label class="form-label" for="email" data-i18n="form.email">E-mail *</label>
               <input type="email" id="email" class="form-input" placeholder="contato@exemplo.com" required>
               <span class="field-error-msg" id="error-email"></span>
             </div>
@@ -908,33 +921,33 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="interestProfile">Perfil de interesse *</label>
+            <label class="form-label" for="interestProfile" data-i18n="form.profile">Perfil de interesse *</label>
             <select id="interestProfile" class="form-select">
-              <option value="consumidor">Consumidor consciente</option>
-              <option value="produtor">Produtor regional / comunitário</option>
-              <option value="empresa">Empresa parceira</option>
-              <option value="instituicao">Instituição de ensino ou pesquisa</option>
-              <option value="outro">Outro interesse</option>
+              <option value="consumidor" data-i18n="form.opt.consumer">Consumidor consciente</option>
+              <option value="produtor" data-i18n="form.opt.producer">Produtor regional / comunitário</option>
+              <option value="empresa" data-i18n="form.opt.company">Empresa parceira</option>
+              <option value="instituicao" data-i18n="form.opt.institution">Instituição de ensino ou pesquisa</option>
+              <option value="outro" data-i18n="form.opt.other">Outro interesse</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="message">Mensagem (opcional)</label>
-            <textarea id="message" class="form-textarea" rows="3" placeholder="Conte um pouco sobre como gostaria de colaborar..."></textarea>
+            <label class="form-label" for="message" data-i18n="form.message">Mensagem (opcional)</label>
+            <textarea id="message" class="form-textarea" rows="3" data-i18n-placeholder="form.messagePh" placeholder="Conte um pouco sobre como gostaria de colaborar..."></textarea>
           </div>
 
           <div class="form-group">
             <label class="checkbox-label" for="privacyConsent">
               <input type="checkbox" id="privacyConsent" required>
-              <span>Concordo em compartilhar meus dados para contato sobre as iniciativas da Keep Amazon, em conformidade com as boas práticas de privacidade.</span>
+              <span data-i18n="form.consent">Concordo em compartilhar meus dados para contato sobre as iniciativas da Keep Amazon, em conformidade com as boas práticas de privacidade.</span>
             </label>
             <span class="field-error-msg" id="error-consent"></span>
           </div>
 
           <div class="modal-actions">
-            <button type="button" class="btn-ghost modal-cancel-btn">Cancelar</button>
+            <button type="button" class="btn-ghost modal-cancel-btn" data-i18n="form.cancel">Cancelar</button>
             <button type="submit" id="formSubmitBtn" class="btn btn-lime">
-              <span>Enviar manifestação</span>
+              <span data-i18n="form.submit">Enviar manifestação</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
@@ -958,13 +971,13 @@
             <img src="assets/logo-keep-amazon-dark.png" alt="Keep Amazon" class="brand-logo-img" width="600" height="600">
           </a>
 
-          <p class="footer-bio-slogan">
+          <p class="footer-bio-slogan" data-i18n="footer.slogan">
             Garantindo a valorização da bioeconomia e dos saberes locais com compromisso, transparência e sustentabilidade.
           </p>
 
           <div class="footer-social-boxes">
             <!-- Telefone -->
-            <a href="https://wa.me/5568981000548" target="_blank" rel="noopener noreferrer" class="social-box-btn" aria-label="Fale conosco pelo WhatsApp" title="WhatsApp">
+            <a href="https://wa.me/5568981000548" target="_blank" rel="noopener noreferrer" class="social-box-btn" data-i18n-aria-label="aria.whatsappTalk" aria-label="Fale conosco pelo WhatsApp" title="WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
@@ -988,23 +1001,23 @@
 
         <!-- Coluna 2: Navegue -->
         <div class="footer-nav-col">
-          <h4 class="footer-col-title">Navegue:</h4>
+          <h4 class="footer-col-title" data-i18n="footer.navigate">Navegue:</h4>
           <ul class="footer-links-list">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#iniciativas">Iniciativas</a></li>
-            <li><a href="#ods">Objetivos (ODS)</a></li>
-            <li><a href="#tanamo">Projeto Tá na Mão</a></li>
+            <li><a href="#inicio" data-i18n="nav.home">Início</a></li>
+            <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+            <li><a href="#iniciativas" data-i18n="nav.initiatives">Iniciativas</a></li>
+            <li><a href="#ods" data-i18n="nav.ods">Objetivos (ODS)</a></li>
+            <li><a href="#tanamo" data-i18n="nav.tanamao">Projeto Tá na Mão</a></li>
             <li><a href="#game">Word Amazon Gamer</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#adesao" data-open-modal="interest">Adesão</a></li>
-            <li><a href="#contato">Contatos</a></li>
+            <li><a href="#produtos" data-i18n="nav.products">Produtos</a></li>
+            <li><a href="#adesao" data-open-modal="interest" data-i18n="nav.join">Adesão</a></li>
+            <li><a href="#contato" data-i18n="nav.contacts">Contatos</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Contatos -->
         <div class="footer-contact-col">
-          <h4 class="footer-col-title">Contatos</h4>
+          <h4 class="footer-col-title" data-i18n="footer.contacts">Contatos</h4>
           <ul class="footer-contact-list">
             <!-- WhatsApp -->
             <li>
@@ -1043,7 +1056,7 @@
                     <polyline points="12 14 12 15 13.5 15"></polyline>
                   </svg>
                 </span>
-                <span>Atendimento 24 horas | Urgências</span>
+                <span data-i18n="footer.support24">Atendimento 24 horas | Urgências</span>
               </div>
             </li>
 
@@ -1069,7 +1082,7 @@
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
                 </span>
-                <span>Amazônia - Brasil</span>
+                <span data-i18n="footer.location">Amazônia - Brasil</span>
               </div>
             </li>
 
@@ -1081,7 +1094,7 @@
                     <path d="M7.5 4.5C9.5 3.5 12.5 3.5 14.5 4c2 .5 4.5 2.5 5.5 5 .8 2.2-.5 4.5-2.5 6-1.5 1.2-2.7 3-4 5.5-.7 1.3-2 1.5-2.5 1-.5-.5-.5-2-.2-3.5.4-2-1.3-4-2.8-6-1.5-2-2-4.5-.5-7.5Z"></path>
                   </svg>
                 </span>
-                <span>Atendimento Online e para todo o Brasil</span>
+                <span data-i18n="footer.online">Atendimento Online e para todo o Brasil</span>
               </div>
             </li>
           </ul>
@@ -1089,13 +1102,14 @@
       </div>
 
       <div class="footer-bottom reveal-blur delay-100">
-        <p>© 2026 Keep Amazon. Todos os direitos reservados.</p>
-        <p>Bioeconomia · Desenvolvimento Regional · Inovação</p>
+        <p data-i18n="footer.rights">© 2026 Keep Amazon. Todos os direitos reservados.</p>
+        <p data-i18n="footer.tagline">Bioeconomia · Desenvolvimento Regional · Inovação</p>
       </div>
     </div>
   </footer>
 
   <!-- Script JavaScript -->
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

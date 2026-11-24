@@ -3,6 +3,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Traduções (js/i18n.js)
+  const T = (key) => (window.KeepAmazonI18n ? window.KeepAmazonI18n.t(key) : key);
+  const submitBtnHTML = () =>
+    `<span data-i18n="form.submit">${T('form.submit')}</span><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+
   // 1. Header Fixo & Efeito Scroll
   const header = document.querySelector('.site-header');
   
@@ -27,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = mobileDrawer?.classList.contains('open');
     if (btnHamburger) {
       btnHamburger.setAttribute('aria-expanded', String(isOpen));
+      btnHamburger.setAttribute('aria-label', T(isOpen ? 'aria.closeMenu' : 'aria.openMenu'));
       btnHamburger.innerHTML = isOpen
         ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`
         : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>`;
@@ -40,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer?.classList.remove('open');
       if (btnHamburger) {
         btnHamburger.setAttribute('aria-expanded', 'false');
+        btnHamburger.setAttribute('aria-label', T('aria.openMenu'));
         btnHamburger.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>`;
       }
     });
@@ -117,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hasError = true;
       fullNameInput?.classList.add('input-error');
       const err = document.getElementById('error-fullName');
-      if (err) err.textContent = 'Informe seu nome completo (mínimo de 3 caracteres).';
+      if (err) err.textContent = T('js.errName');
     }
 
     // Validação de e-mail
@@ -126,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hasError = true;
       emailInput?.classList.add('input-error');
       const err = document.getElementById('error-email');
-      if (err) err.textContent = 'Informe um endereço de e-mail válido.';
+      if (err) err.textContent = T('js.errEmail');
     }
 
     // Validação de WhatsApp
@@ -135,14 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
       hasError = true;
       whatsappInput?.classList.add('input-error');
       const err = document.getElementById('error-whatsapp');
-      if (err) err.textContent = 'Informe um WhatsApp válido com DDD (mínimo 10 dígitos).';
+      if (err) err.textContent = T('js.errPhone');
     }
 
     // Validação de consentimento LGPD
     if (!consentCheckbox?.checked) {
       hasError = true;
       const err = document.getElementById('error-consent');
-      if (err) err.textContent = 'É necessário concordar com a política de privacidade.';
+      if (err) err.textContent = T('js.errConsent');
     }
 
     if (hasError) return;
@@ -150,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Estado de carregamento
     if (formSubmitBtn) {
       formSubmitBtn.disabled = true;
-      formSubmitBtn.innerHTML = `<span>Validando...</span>`;
+      formSubmitBtn.innerHTML = `<span>${T('js.sending')}</span>`;
     }
 
     const payload = {
@@ -177,33 +184,33 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok && data.success) {
           showFeedback(
             'success',
-            '<strong>Manifestação enviada com sucesso!</strong><br>' +
-              (data.message || 'Seus dados foram validados pela infraestrutura Keep Amazon.') +
-              '<br><small style="opacity: 0.85;">Status técnico: Pronto para conexão com CRM/Webhook.</small>'
+            `<strong>${T('js.successTitle')}</strong><br>` +
+              T('js.successDefault') +
+              `<br><small style="opacity: 0.85;">${T('js.successTech')}</small>`
           );
           interestForm.reset();
         } else {
-          showFeedback('error', data.message || 'Ocorreu um erro ao processar. Tente novamente.');
+          showFeedback('error', T('js.errProcess'));
         }
       } else {
         // Modo offline / abertura direta de arquivo file://
         showFeedback(
           'success',
-          '<strong>Validação concluída localmente!</strong><br>' +
-            'Todos os campos atendem aos critérios de integridade da Keep Amazon.<br>' +
-            '<small style="opacity: 0.85;">Em ambiente de produção com servidor, a requisição é despachada para /api/interest.</small>'
+          `<strong>${T('js.localTitle')}</strong><br>` +
+            `${T('js.localBody')}<br>` +
+            `<small style="opacity: 0.85;">${T('js.localNote')}</small>`
         );
         interestForm.reset();
       }
     } catch {
       showFeedback(
         'error',
-        'Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.'
+        T('js.errNetwork')
       );
     } finally {
       if (formSubmitBtn) {
         formSubmitBtn.disabled = false;
-        formSubmitBtn.innerHTML = `<span>Enviar manifestação</span><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+        formSubmitBtn.innerHTML = submitBtnHTML();
       }
     }
   });
